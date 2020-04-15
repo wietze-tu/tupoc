@@ -1,8 +1,8 @@
 <template>
     <nav id="mainnavigation" class="main">
       <ul id="normal-main">
-        <li v-for="menu in mainMenus" v-bind:key="menu" class="nav-menu"> 
-          <router-link :to="'' +  menu.url">
+        <li v-for="menu in mainMenus" v-bind:key="menu.id" class="nav-menu"> 
+          <router-link v-bind:to="menu.url">
             {{ menu.name }}  
           </router-link> 
         </li>
@@ -11,19 +11,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-@Component
-    export default class MainNav extends Vue {
-        data() {
-        return {
-            mainMenus: [
-            { "name": "Webshop", "url": "/webshop" },
-            { "name": "Diensten", "url": "/services" },
-            { "name": "Nieuws", "url": "/verlichting" }
-            ]
-        }
-        }
-    }
+  export default  {
+      data() {
+      return {
+          mainMenus: [
+          { "id":"01", "name": "Webshop", "url": "/webshop" },
+          { "id":"02", "name": "Diensten", "url": "/services" },
+          { "id":"03", "name": "Nieuws", "url": "/news" }
+          ]
+      }
+      }
+  }
 </script>
 
 

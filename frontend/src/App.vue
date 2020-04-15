@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import StackUsp from '@/components/usp/stack_usp.vue'
-import StackHeader from '@/components/header/stack_head.vue' 
+import StackUsp from '@/components/usp/container_usp.vue'
+import StackHeader from '@/components/header/container_head.vue' 
 
 export default {
   components: {
@@ -37,10 +37,19 @@ a:hover {
     color: $tuGray;
     text-decoration: underline;
 }
+.dropdown-toggle::after {
+    display: none !important;
+}
+.nav-link {
+  color: $tuGrayMenu !important;
+  padding-left: 0 !important;
+  padding-right: 1.8rem !important
+}
+
 
 @media (min-width: 1200px){
 .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 960px !Important;
+    max-width: 960px !important;
   } 
 }
 

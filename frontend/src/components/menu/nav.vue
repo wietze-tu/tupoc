@@ -1,26 +1,51 @@
 <template>
 <div class="container">
-    <nav id="mainnavigation" class="row main">
-      <ul id="normal-main">
-        <li v-for="menu in menus" v-bind:key="menu" class="nav-menu"> 
-          <router-link :to="'' +  menu.url">
-            {{ menu.name }}
-          </router-link>
-        </li>
-      </ul>
-    </nav>
+      <b-navbar toggleable="lg" variant="faded" type="light" id="mainnavigation" class="row main">
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+         <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+            <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
+              <submenu-Item v-bind:submenus="kabel">
+              </submenu-Item>
+             </b-nav-item-dropdown>
+          </b-navbar-nav> 
+        </b-collapse>
+      </b-navbar>
 </div>
 </template>
 
 <script lang="ts">
+import submenu from './submenuitems.vue'
 export default {
-  props: ['menus'],
+  props: ['menus', 'submenukabel'],
   data() {
     return {
+        kabel: [
+            { "id":"0001",
+              "name":"Energiekabels",
+              "items": [
+                { "id":"101", "name": "vmvl | kabel | qwpk", "url": "/#" },
+                { "id":"102", "name": "Aarddraad", "url": "/#" }
+           ]},
+           {  "id":"0002",
+              "name":"Informatie- en signaalkabels",
+              "items": [
+                { "id":"103", "name": "UTP", "url": "/#" },
+                { "id":"104", "name": "Coax | Coaxkabel", "url": "/#" }
+           ]},
+           
 
+        ],
+        electro: [
+          { "id":"111", "name": "Electro", "url": "/#" },
+          { "id":"112", "name": "Aarddraad", "url": "/#" },
+        ]
       }
   },
-  name: 'navigation'
+  name: 'navigation',
+  components: {
+    'submenuItem': submenu,
+  }
 }
 
 </script>
@@ -28,14 +53,29 @@ export default {
 
 <style scoped lang="scss">
  @import '../../color.scss';
+.navbar-nav {
+    li {
+      font-size: 0.9em;
+      font-family: Arial, Helvetica, sans-serif;
+      a .nav-link {
+            padding-left: 0;
+        }
+    }
+  }
+
+
+
 #webshop {
     .container {
         padding: 0;
     }
 }
+
+
 nav.main {
     position: relative;
     margin: 0;
+    padding: 0;
     width: 100%;
     >ul {
     margin-bottom: 0;

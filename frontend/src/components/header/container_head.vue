@@ -27,7 +27,7 @@
 import Logo from './logo.vue'
 import MainNav from './mainNav.vue'
 import Search from './search.vue'
-import SsbPersonal from './stack_personal.vue'
+import SsbPersonal from './container_personal.vue'
 
 export default {
       name: 'appHeader',

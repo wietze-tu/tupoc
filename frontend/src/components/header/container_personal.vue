@@ -25,6 +25,5 @@ export default {
 
 <style scoped lang="scss">
 @import '../../color.scss';
-
-  
+ 
 </style>
