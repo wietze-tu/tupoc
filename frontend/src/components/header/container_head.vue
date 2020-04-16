@@ -16,7 +16,7 @@
         </div> 
         <div class="col-sm-2 ">
           <!-- personal menu -->
-            <ssbpersonal/>
+            <personal/>
         </div>   
       </div>
   </div>
@@ -27,7 +27,7 @@
 import Logo from './logo.vue'
 import MainNav from './mainNav.vue'
 import Search from './search.vue'
-import SsbPersonal from './container_personal.vue'
+import Personal from './container_personal.vue'
 
 export default {
       name: 'appHeader',
@@ -36,7 +36,7 @@ export default {
         'logo': Logo,
         'mainNav': MainNav,
         'search': Search,
-        'ssbpersonal': SsbPersonal
+        'personal': Personal
       }
 }
 </script>
@@ -45,12 +45,12 @@ export default {
 <style scoped lang="scss">
  @import '../../color.scss';
  #head {
-   margin-top: 5px;
-   margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border-bottom: 1px solid $tuWhiteGray;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
  .head {

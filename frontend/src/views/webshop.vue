@@ -47,4 +47,5 @@ export default  {
      border-bottom: 1px solid $tuWhiteGray;
 }
 
+
 </style>

@@ -40,7 +40,17 @@ a:hover {
 .dropdown-toggle::after {
     display: none !important;
 }
-.nav-link {
+.dropdown-menu {
+  border: 0px !important;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: $tuWhite !important;
+}
+ .dropdown-item {
+    padding-bottom: 0px !important;
+}
+
+.nav-link, .dropdown-item{
   color: $tuGrayMenu !important;
   padding-left: 0 !important;
   padding-right: 1.8rem !important

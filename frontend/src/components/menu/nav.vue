@@ -5,7 +5,7 @@
          <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
-              <submenu-Item v-bind:submenus="kabel">
+              <submenu-Item v-bind:submenus="kabel" class="dropdownContainer">
               </submenu-Item>
              </b-nav-item-dropdown>
           </b-navbar-nav> 
@@ -31,6 +31,12 @@ export default {
               "name":"Informatie- en signaalkabels",
               "items": [
                 { "id":"103", "name": "UTP", "url": "/#" },
+                { "id":"104", "name": "Coax | Coaxkabel", "url": "/#" }
+           ]},
+           {  "id":"0003",
+              "name":"test",
+              "items": [
+                { "id":"103", "name": "UTP-A", "url": "/#" },
                 { "id":"104", "name": "Coax | Coaxkabel", "url": "/#" }
            ]},
            
@@ -63,14 +69,28 @@ export default {
     }
   }
 
-
-
 #webshop {
     .container {
         padding: 0;
     }
 }
-
+.dropdown-menu  {
+  font-size: 0.9em;
+}
+.dropdownContainer {
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  background: $tuWhite;
+  border-bottom: 1px solid $tuWhiteGray;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 50px;
+  .container{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
 
 nav.main {
     position: relative;
