@@ -1,2 +1,3 @@
 # POC-TU
-# 31/3/2020
+# MENU API placeholders:
+http://my-json-server.typicode.com/wietze-tu/tupoc/
