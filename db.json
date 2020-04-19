@@ -33,7 +33,7 @@
 		  "name":"Verbindingsmaterialen",
 		  "items": [
 			{ "id":"101", "name": "Verbindingsklem", "url": "/#" },
-			{ "id":"102", "name": "Patchkabel instelbare gebwouinstall": "/#" },
+			{ "id":"102", "name": "Patchkabel instelbare gebwouinstall", "url": "/#" },
 			{ "id":"103", "name": "Perskabel voor koperkabel", "url": "/#" },
 			{ "id":"104", "name": "Perskabel voor koperkabel DIN", "url": "/#" },
 			{ "id":"105", "name": "Adereindhuis", "url": "/#" },
