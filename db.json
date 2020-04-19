@@ -25,10 +25,11 @@
 		  "items": [
 			{ "id":"113", "name": "Bedragingskoker", "url": "/#" },
 			{ "id":"114", "name": "Leidingkanaal", "url": "/#" }
-	   ]},
+	   ]}
 	   
 	],
- "electro": [
+	
+	"electro": [
 		{ "id":"0001",
 		  "name":"Verbindingsmaterialen",
 		  "items": [
@@ -52,8 +53,8 @@
 		  "name":"Brandbeveiliging",
 		  "items": [
 			{ "id":"113", "name": "Brandmelders", "url": "/#" }
-	   ]},
+	   ]}
 	   
-	],
-  
+	]
+	
 }
