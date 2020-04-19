@@ -1,9 +1,5 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
+  
   "kabel": [{ 
     "id": 1, 
     "name": "some comment wietze", 
@@ -22,7 +18,7 @@
       ]}
   ],
   
-"electro": [{ 
+ "electro": [{ 
     "id": 1, 
     "name": "electro wietze", 
     "postId": 1,
@@ -39,7 +35,5 @@
                 { "id":"202", "name": "Aarddraad", "url": "/#" }
       ]}
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  
 }
