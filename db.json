@@ -1,5 +1,5 @@
 {
-kabel: [
+"kabel": [
 		{ "id":"0001",
 		  "name":"Energiekabels",
 		  "items": [
@@ -28,7 +28,7 @@ kabel: [
 	   ]},
 	   
 	],
- electro: [
+ "electro": [
 		{ "id":"0001",
 		  "name":"Verbindingsmaterialen",
 		  "items": [
