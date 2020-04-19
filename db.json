@@ -55,6 +55,12 @@
 			{ "id":"113", "name": "Brandmelders", "url": "/#" }
 	   ]}
 	   
-	]
-	
+	],
+	"verlichting": [],
+	"duurzaamheid": [],
+	"leidingsystemen": [],
+	"sanitair": [],
+	"gereedschap": [],
+	"pbm": [],	
+	"bruinwitgoed": []
 }
