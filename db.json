@@ -11,7 +11,7 @@
     "items": [
                 { "id":"101", "name": "vmvl | kabel | qwpk", "url": "/#" },
                 { "id":"102", "name": "Aarddraad", "url": "/#" }
-    },
+    ]},
     {
     "id": 1, 
     "name": "some comment wietze", 
@@ -19,7 +19,7 @@
     "items": [
                 { "id":"101", "name": "vmvl | kabel | qwpk", "url": "/#" },
                 { "id":"102", "name": "Aarddraad", "url": "/#" }
-      }
+      ]}
   ],
   "profile": {
     "name": "typicode"
