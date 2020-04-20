@@ -17,7 +17,7 @@
 <script lang="ts">
 import submenu from './submenuitems.vue'
 export default {
-  props: ['menus', 'submenukabel'],
+  props: ['menus'],
   data() {
     return {
         kabel: [
@@ -43,8 +43,23 @@ export default {
 
         ],
         electro: [
-          { "id":"111", "name": "Electro", "url": "/#" },
-          { "id":"112", "name": "Aarddraad", "url": "/#" },
+          { "id":"0005",
+              "name":"Verbindingsmatrialen",
+              "items": [
+                { "id":"101", "name": "Verbindingsklem", "url": "/#" },
+                { "id":"102", "name": "Lasklem", "url": "/#" }
+           ]},
+           {  "id":"0006",
+              "name":"Datawerkmatrialen",
+              "items": [
+                { "id":"103", "name": "Modulaire connector", "url": "/#" },
+                { "id":"104", "name": "Patchkabel twisted pair", "url": "/#" }
+           ]},
+           {  "id":"0007",
+              "name":"Brandbeveiliging",
+              "items": [
+                { "id":"103", "name": "Brandmelder", "url": "/#" }
+           ]},
         ]
       }
   },

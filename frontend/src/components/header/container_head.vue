@@ -2,19 +2,20 @@
 <div  id="head">
   <div class="container head stack_header">
       <div class="row appHeader">
-        <div class="col-sm-3 ">
+        <div class="col-sm-3 logoSection">
             <!-- logo -->
             <logo/>
         </div>
-        <div class="col-sm-3 ">
+        <div class="col-sm-3 navSection mobile-hide">
           <!-- main menu -->
             <mainNav/>
         </div>
-        <div class="col-sm-4 search">
+        
+        <div class="col-sm-4 searchSection">
           <!-- search -->
           <search/>
         </div> 
-        <div class="col-sm-2 ">
+        <div class="col-sm-2 personalSection">
           <!-- personal menu -->
             <personal/>
         </div>   
@@ -58,11 +59,16 @@ export default {
   padding-left: 0px;
 }
 .appHeader {
-
   .headerRight {
     float: right;
     padding-right: 0;
   }
+  .searchSection {
+    padding-top: 6px;
+  }
+  
+}
+@media screen and (max-width: 768px) { 
   
 }
 </style>

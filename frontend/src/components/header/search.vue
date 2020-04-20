@@ -2,7 +2,7 @@
     <form>
         <div class="form-group">
             <b-icon-search class="form-control-icon"></b-icon-search>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ik zoek een product">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ik zoek een product">
         </div>
     </form>
 </template>
@@ -39,7 +39,7 @@ import { BIconSearch } from 'bootstrap-vue'
         position: absolute;
         z-index: 2;
         display: block;
-        top: 27px;
+        top: 12px;
         right: 20px;
         width: 1.2rem;
         height: 1.2rem;

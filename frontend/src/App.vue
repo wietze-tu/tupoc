@@ -62,6 +62,15 @@ a:hover {
     max-width: 960px !important;
   } 
 }
-
+@media screen and (max-width: 768px) { 
+  .mobile-hide { 
+    display: none; 
+  } 
+}
+@media screen and (min-width: 769px) { 
+  .desktop-hide {
+    display: none; 
+  }
+}
 
 </style>

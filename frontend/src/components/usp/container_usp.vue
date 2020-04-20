@@ -1,5 +1,5 @@
 <template>
-  <div  id="usp-header" class="ssb_blok">
+  <div  id="usp-header" class="ssb_blok mobile-hide">
     <div class="container">
         <div class="row">
             <div class="col-sm-4">

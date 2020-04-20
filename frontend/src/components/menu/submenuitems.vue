@@ -1,6 +1,7 @@
 <template>
 <div class="">
     <div class="container">
+        {{ submenus }}
         <div v-for="submenu in submenus"  v-bind:key="submenu.id" class="col-sm-3 itemsContainer">
             <h6>{{submenu.name}}</h6>
             <b-dropdown-item v-for="item in submenu.items"  v-bind:key="item.id" href="#">
@@ -12,13 +13,17 @@
 </template>
 
 <script lang="ts">
+
 export default  {
     props: ['submenus'],
      data() {
         return {
             }   
         },
-     name: 'submenuitem'
+     name: 'submenuitem',
+     methods: {         
+
+    }
 }
 </script>
 

@@ -33,7 +33,7 @@ nav.main {
     margin: 0;
     width: 100%;
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 0px;
     >ul {
     margin-bottom: 0;
     padding: 0px;
