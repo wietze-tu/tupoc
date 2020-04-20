@@ -5,9 +5,9 @@
          <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <mainNav class="desktop-hide"></mainNav>
-            <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
-              <submenu-Item v-bind:submenus="menu.sm" class="dropdownContainer">
-              </submenu-Item>
+              <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
+                <submenu-Item v-if="menu.sm" v-bind:submenus="menu.sm" class="dropdownContainer">
+                </submenu-Item>
              </b-nav-item-dropdown>
           </b-navbar-nav> 
         </b-collapse>

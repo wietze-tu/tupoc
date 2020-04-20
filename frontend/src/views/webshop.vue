@@ -2,8 +2,7 @@
   <div id="webshop">
     <div id="navigation">
       <navigation 
-        v-bind:menus="menus" 
-        v-bind:submenukabel="submenukabel" >
+        v-bind:menus="menus">
         </navigation>
     </div>
     <h1>Webshop</h1>
@@ -19,13 +18,13 @@ export default  {
       menus: [
         { "id":"1", "name": "Draad & Kabel", "sm":"kabel", "url": "/draad-kabel" },
         { "id":"2", "name": "Elektrotechniek", "sm":"electro", "url": "/elektrotechniek" },
-        { "id":"3", "name": "Verlichting", "sm":"none", "url": "/verlichting" },
-        { "id":"4", "name": "Duurzaamheid", "sm":"none", "url": "/thema" },
-        { "id":"5", "name": "Leidingsystemen", "sm":"none", "url": "/leidingsystemen" },
-        { "id":"6", "name": "Sanitair", "sm":"none", "url": "/sanitair" },
-        { "id":"7", "name": "Gereedschap", "sm":"none","url": "/gereedschap" },
-        { "id":"8", "name": "PBM", "sm":"none", "url": "/pbm" },
-        { "id":"9", "name": "Bruin/witgoed", "sm":"none", "url": "/bruin-witgoed" }
+        { "id":"3", "name": "Verlichting", "sm":"", "url": "/verlichting" },
+        { "id":"4", "name": "Duurzaamheid", "sm":"", "url": "/thema" },
+        { "id":"5", "name": "Leidingsystemen", "sm":"", "url": "/leidingsystemen" },
+        { "id":"6", "name": "Sanitair", "sm":"", "url": "/sanitair" },
+        { "id":"7", "name": "Gereedschap", "sm":"","url": "/gereedschap" },
+        { "id":"8", "name": "PBM", "sm":"", "url": "/pbm" },
+        { "id":"9", "name": "Bruin/witgoed", "sm":"", "url": "/bruin-witgoed" }
       ]
     }
       
