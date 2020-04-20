@@ -1,0 +1,62 @@
+{
+"kabel": [
+		{ "id":"0001",
+		  "name":"Energiekabels",
+		  "items": [
+			{ "id":"101", "name": "vmvl | kabel | qwpk", "url": "/#" },
+			{ "id":"102", "name": "instalatiedraad | vd draad", "url": "/#" },
+			{ "id":"103", "name": "Thermalint | thermolint | warmtelint", "url": "/#" },
+			{ "id":"104", "name": "Aarddraad", "url": "/#" },
+			{ "id":"105", "name": "Gietmof | kabelmof", "url": "/#" }
+	   ]},
+	   {  "id":"0002",
+		  "name":"Informatie- en signaalkabels",
+		  "items": [
+			{ "id":"106", "name": "UTP", "url": "/#" },
+			{ "id":"107", "name": "Coax | Coaxkabel", "url": "/#" },
+			{ "id":"108", "name": "Busleiding", "url": "/#" },
+			{ "id":"109", "name": "Luidsprekersnoer", "url": "/#" },
+			{ "id":"110", "name": "Patchkabel coax", "url": "/#" },
+			{ "id":"111", "name": "Glasvezelkabel", "url": "/#" },
+			{ "id":"112", "name": "Patch kabel glasvezel", "url": "/#" }
+	   ]},
+	   {  "id":"0003",
+		  "name":"Kabelkokers",
+		  "items": [
+			{ "id":"113", "name": "Bedragingskoker", "url": "/#" },
+			{ "id":"114", "name": "Leidingkanaal", "url": "/#" }
+	   ]}
+	   
+	],
+	
+	"electro": [
+		{ "id":"0001",
+		  "name":"Verbindingsmaterialen",
+		  "items": [
+			{ "id":"101", "name": "Verbindingsklem", "url": "/#" },
+			{ "id":"102", "name": "Patchkabel instelbare gebwouinstall", "url": "/#" },
+			{ "id":"103", "name": "Perskabel voor koperkabel", "url": "/#" },
+			{ "id":"104", "name": "Perskabel voor koperkabel DIN", "url": "/#" },
+			{ "id":"105", "name": "Adereindhuis", "url": "/#" },
+			{ "id":"106", "name": "Conn v insteekbare gebouwinstall", "url": "/#" },
+			{ "id":"107", "name": "Drukknop frontelement", "url": "/#" },
+			{ "id":"108", "name": "Eindschakelaar", "url": "/#" },
+			{ "id":"109", "name": "Zekeringsrijklem", "url": "/#" }
+	   ]},
+	   {  "id":"0002",
+		  "name":"Datanetwerkmaterialen",
+		  "items": [
+			{ "id":"110", "name": "Module connector", "url": "/#" },
+			{ "id":"111", "name": "Patchkabel twisted pair", "url": "/#" }
+	   ]},
+	   {  "id":"0003",
+		  "name":"Brandbeveiliging",
+		  "items": [
+			{ "id":"113", "name": "Brandmelders", "url": "/#" }
+	   ]}
+	   
+	],
+	"verlichting": [],
+	"none": []
+
+}
