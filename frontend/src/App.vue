@@ -63,6 +63,9 @@ a:hover {
   } 
 }
 @media screen and (max-width: 768px) { 
+  body {
+    margin-left: 10px !important;
+  }
   .mobile-hide { 
     display: none; 
   } 

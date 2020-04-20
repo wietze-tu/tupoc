@@ -37,7 +37,7 @@ import { BIconSearch } from 'bootstrap-vue'
         }
     .form-control-icon {
         position: absolute;
-        z-index: 2;
+        z-index: 0;
         display: block;
         top: 12px;
         right: 20px;
@@ -46,7 +46,7 @@ import { BIconSearch } from 'bootstrap-vue'
         line-height: 2.375rem;
         text-align: center;
         pointer-events: none;
-        color: #aaa;
+        color: $tuGrayLight;
         float: right;
     }
 }

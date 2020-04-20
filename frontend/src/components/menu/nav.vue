@@ -1,11 +1,12 @@
 <template>
 <div class="container">
-      <b-navbar toggleable="lg" variant="faded" type="light" id="mainnavigation" class="row main">
+      <b-navbar toggleable="lg" variant="faded" type="light" id="mainnavigation" class="row main-dropdown">
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
          <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
+            <mainNav/>
             <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
-              <submenu-Item v-bind:submenus="kabel" class="dropdownContainer">
+              <submenu-Item v-bind:submenus="menu.sm" class="dropdownContainer">
               </submenu-Item>
              </b-nav-item-dropdown>
           </b-navbar-nav> 
@@ -16,56 +17,17 @@
 
 <script lang="ts">
 import submenu from './submenuitems.vue'
+import mainNav from './mainNav.vue'
 export default {
-  props: ['menus'],
+  props: ['menus', 'submenukabel'],
   data() {
     return {
-        kabel: [
-            { "id":"0001",
-              "name":"Energiekabels",
-              "items": [
-                { "id":"101", "name": "vmvl | kabel | qwpk", "url": "/#" },
-                { "id":"102", "name": "Aarddraad", "url": "/#" }
-           ]},
-           {  "id":"0002",
-              "name":"Informatie- en signaalkabels",
-              "items": [
-                { "id":"103", "name": "UTP", "url": "/#" },
-                { "id":"104", "name": "Coax | Coaxkabel", "url": "/#" }
-           ]},
-           {  "id":"0003",
-              "name":"test",
-              "items": [
-                { "id":"103", "name": "UTP-A", "url": "/#" },
-                { "id":"104", "name": "Coax | Coaxkabel", "url": "/#" }
-           ]},
-           
-
-        ],
-        electro: [
-          { "id":"0005",
-              "name":"Verbindingsmatrialen",
-              "items": [
-                { "id":"101", "name": "Verbindingsklem", "url": "/#" },
-                { "id":"102", "name": "Lasklem", "url": "/#" }
-           ]},
-           {  "id":"0006",
-              "name":"Datawerkmatrialen",
-              "items": [
-                { "id":"103", "name": "Modulaire connector", "url": "/#" },
-                { "id":"104", "name": "Patchkabel twisted pair", "url": "/#" }
-           ]},
-           {  "id":"0007",
-              "name":"Brandbeveiliging",
-              "items": [
-                { "id":"103", "name": "Brandmelder", "url": "/#" }
-           ]},
-        ]
       }
   },
   name: 'navigation',
   components: {
     'submenuItem': submenu,
+    'mainNav': mainNav
   }
 }
 
@@ -107,7 +69,7 @@ export default {
   }
 }
 
-nav.main {
+nav.main-dropdown {
     position: relative;
     margin: 0;
     padding: 0;
@@ -166,7 +128,7 @@ nav.main {
     margin-left: 2px;
     width: 50px;
 }
-nav.main>ul>li.currentx {
+nav.main-dropdown>ul>li.currentx {
     border-color: $tuGreen;
     border-style: solid;
     border-top: 0px;
@@ -186,5 +148,25 @@ nav.main>ul>li.currentx {
     background: linear-gradient(to right,$tuGreen,$tuGreenLight);
 }
 
+@media screen and (max-width: 768px) { 
+  .navbar-nav {
+    li {
+        text-align: left;
 
+    }
+  }
+  nav.main-dropdown {
+      position: absolute;
+      top: 0;
+      .navbar-nav  {
+        background: $tuWhite;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+  }
+  .navbar-toggler {
+    border-color: $tuWhite !important;
+    margin-top: 8px;
+  }
+}
 </style>

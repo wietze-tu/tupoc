@@ -10,7 +10,10 @@
           <!-- main menu -->
             <mainNav/>
         </div>
-        
+        <div class="col-sm-2 personalSectionMobile">
+          <!-- personal menu -->
+            <personal/>
+        </div>  
         <div class="col-sm-4 searchSection">
           <!-- search -->
           <search/>
@@ -26,7 +29,7 @@
 
 <script lang="ts">
 import Logo from './logo.vue'
-import MainNav from './mainNav.vue'
+import MainNav from '../menu/mainNav.vue'
 import Search from './search.vue'
 import Personal from './container_personal.vue'
 
@@ -69,6 +72,33 @@ export default {
   
 }
 @media screen and (max-width: 768px) { 
-  
+  #head {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 0px;
+    -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  }
+  .logoSection {
+    width: 25%;
+    margin-left: 20%;
+    float: left;
+  }
+  .personalSectionMobile {
+    display: block;
+    width: auto;
+    position: absolute;
+    top: -8px;
+    right: 0px;
+  }
+  .personalSection {
+    display: none;
+  }
+  .searchSection {
+    margin-right: 14px;
+    margin-left: 14px;
+    margin-top: 10px;
+  }
 }
 </style>
