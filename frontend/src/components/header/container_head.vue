@@ -66,10 +66,19 @@ export default {
     float: right;
     padding-right: 0;
   }
+  .navSection {
+    padding-left: 30px;
+  }
   .searchSection {
     padding-top: 6px;
   }
-  
+  .personalSection {
+    position: relative;
+    bottom: 10px;
+  }
+  .personalSectionMobile {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) { 
   #head {

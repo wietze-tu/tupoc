@@ -49,6 +49,7 @@ export default {
   .dropdown-item {
       padding-top: 0px;
       padding-bottom: 0px;
+      font-size: 10px;
   }
  .itemsContainer {
     padding-right: 0px;
@@ -60,9 +61,11 @@ export default {
          font-weight: 600;
          margin-top: 20px;
      }
-     a {
+     li{
+          font-size: 0.9em;
+     }
+     a:link {
          color: $tuGray;
-         font-size: 0.9em;
      }
  }
 

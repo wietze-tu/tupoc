@@ -26,12 +26,8 @@ export default  {
         { "id":"7", "name": "Gereedschap", "sm":"none","url": "/gereedschap" },
         { "id":"8", "name": "PBM", "sm":"none", "url": "/pbm" },
         { "id":"9", "name": "Bruin/witgoed", "sm":"none", "url": "/bruin-witgoed" }
-      ],
-      submenukabel: [
-        { "id":"101", "name": "vmvl | kabel | qwpk", "url": "/#" },
-        { "id":"102", "name": "Aarddraad", "url": "/#" },
       ]
-      }
+    }
       
   },
     name: 'Webshop',
@@ -43,9 +39,6 @@ export default  {
 
 <style scoped lang="scss">
  @import '../color.scss';
-#navigation {
-     border-bottom: 1px solid $tuWhiteGray;
-}
 
 
 </style>

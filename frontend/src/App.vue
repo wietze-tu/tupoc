@@ -37,6 +37,9 @@ a:hover {
     color: $tuGray;
     text-decoration: underline;
 }
+h1 {
+  margin-top: 5px !important;
+}
 .dropdown-toggle::after {
     display: none !important;
 }
@@ -46,7 +49,7 @@ a:hover {
 .dropdown-item:hover, .dropdown-item:focus {
   background-color: $tuWhite !important;
 }
- .dropdown-item {
+.dropdown-item {
     padding-bottom: 0px !important;
 }
 
