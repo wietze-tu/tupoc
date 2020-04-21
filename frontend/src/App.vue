@@ -66,10 +66,7 @@ h1 {
   } 
 }
 @media screen and (max-width: 768px) { 
-  body {
-    margin-left: 10px !important;
-  }
-  .mobile-hide { 
+ .mobile-hide { 
     display: none; 
   } 
 }

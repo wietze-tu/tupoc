@@ -1,5 +1,5 @@
 <template>
-    <div class="shoppingCard">
+    <div class="shoppingCard float-right">
         <a href="/cartoverview/" class="open go-to-cart-overview">
         </a>
     </div>

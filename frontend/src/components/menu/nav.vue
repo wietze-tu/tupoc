@@ -1,18 +1,20 @@
 <template>
-<div class="container">
-      <b-navbar toggleable="lg" variant="faded" type="light" id="mainnavigation" class="row main-dropdown">
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <mainNav class="desktop-hide"></mainNav>
-              <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
-                <submenu-Item v-if="menu.sm" v-bind:submenus="menu.sm" class="dropdownContainer">
-                </submenu-Item>
-             </b-nav-item-dropdown>
-          </b-navbar-nav> 
-        </b-collapse>
-      </b-navbar>
-</div>
+  <div class="navcontainer">
+    <div class="container">
+        <b-navbar toggleable="lg" variant="faded" type="light" id="mainnavigation" class="row main-dropdown">
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav>
+              <mainNav class="desktop-hide"></mainNav>
+                <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
+                  <submenu-Item v-if="menu.sm" v-bind:submenus="menu.sm" class="dropdownContainer">
+                  </submenu-Item>
+              </b-nav-item-dropdown>
+            </b-navbar-nav> 
+          </b-collapse>
+        </b-navbar>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -36,6 +38,11 @@ export default {
 
 <style scoped lang="scss">
  @import '../../color.scss';
+ #navigation {
+   .navcontainer{
+   border-bottom: 1px solid $tuGrayBorder;
+   }
+ }
 .navbar-nav {
     li {
       font-size: 0.9em;
@@ -148,6 +155,7 @@ nav.main-dropdown>ul>li.currentx {
     background: linear-gradient(to right,$tuGreen,$tuGreenLight);
 }
 
+
 @media screen and (max-width: 768px) { 
   .navbar-nav {
     li {
@@ -157,7 +165,11 @@ nav.main-dropdown>ul>li.currentx {
   }
   nav.main-dropdown {
       position: absolute;
-      top: 0;
+      top: 100px;
+      button {
+        position: fixed;
+        top: 0px;
+      }
       .navbar-nav  {
         background: $tuWhite;
         padding-top: 20px;

@@ -1,5 +1,5 @@
 <template>
-    <div class="myfavorites">
+    <div class="myfavorites float-right">
         <b-icon-star></b-icon-star>
     </div>
 </template>

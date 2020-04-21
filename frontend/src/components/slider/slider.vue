@@ -4,12 +4,12 @@
         id="carousel-fade"
         style="text-shadow: 0px 0px 2px #000"
         fade
-        indicators
         img-width="2300"
         img-height="200"
-        v-model="onliner"
+        v-model="slide"
       >
         <b-carousel-slide
+        content-visible-up = "sm"
         v-for="item in carouselItems"
         :key="item.id"
         :caption="item.text"
@@ -28,17 +28,17 @@ export default  {
             {
             id: 1,
             image: "https://www.technischeunie.nl/images/content/home/public/industrie.jpg",
-            text: "De groothandel in technische installatiematerialen voor bouw, installatie en industrie"
+            text: ""
             },
             {
             id: 2,
             image: "https://www.technischeunie.nl/images/content/home/public/installateur.jpg",
-            text: "De groothandel in technische installatiematerialen voor bouw, installatie en industrie"
+            text: ""
             },
             {
             id: 3,
             image: "https://www.technischeunie.nl/images/content/home/public/installatiebedrijf.jpg",
-            text: "De groothandel in technische installatiematerialen voor bouw, installatie en industrie"
+            text: "USP text"
             }
         ],
         slide: 0,
@@ -53,5 +53,13 @@ export default  {
 
 <style scoped lang="scss">
 @import '../../color.scss';
-    
+
+    h3 {
+        line-height: 2.7em;
+        font-size: 1.3em;
+        margin-left: 10px;
+        text-shadow: 1px 1px 2px $tuWhiteGray;
+    }
+
+ 
 </style>

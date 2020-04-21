@@ -31,7 +31,7 @@
 import Logo from './logo.vue'
 import MainNav from '../menu/mainNav.vue'
 import Search from './search.vue'
-import Personal from './container_personal.vue'
+import Personal from './personal/container_personal.vue'
 
 export default {
       name: 'appHeader',
@@ -50,7 +50,6 @@ export default {
  @import '../../color.scss';
  #head {
   margin-top: 5px;
-  margin-bottom: 5px;
   border-bottom: 1px solid $tuWhiteGray;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -62,12 +61,13 @@ export default {
   padding-left: 0px;
 }
 .appHeader {
+  margin-right: 0px;
   .headerRight {
     float: right;
     padding-right: 0;
   }
   .navSection {
-    padding-left: 30px;
+    padding-left: 20px;
   }
   .searchSection {
     padding-top: 6px;
@@ -76,9 +76,7 @@ export default {
     position: relative;
     bottom: 10px;
   }
-  .personalSectionMobile {
-    display: none;
-  }
+
 }
 @media screen and (max-width: 768px) { 
   #head {
@@ -110,4 +108,10 @@ export default {
     margin-top: 10px;
   }
 }
+@media screen and (min-width: 768px) { 
+  .personalSectionMobile {
+    display: none;
+  }
+}
+
 </style>

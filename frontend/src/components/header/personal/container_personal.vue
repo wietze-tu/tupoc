@@ -1,15 +1,15 @@
 <template>
   <div>
-    <my-account/>
-    <my-favorites/>
     <my-shopping-card/>
+    <my-favorites/>
+    <my-account/>
   </div>
 </template>
 
 <script lang="ts">
-import MyShoppingCard from './personal/myShoppingCard.vue'
-import MyAccount from './personal/myAccount.vue'
-import Myfavorites from './personal/myFavorites.vue'
+import MyShoppingCard from './myShoppingCard.vue'
+import MyAccount from './myAccount.vue'
+import Myfavorites from './myFavorites.vue'
 
 export default {
     name: 'Ssbpersonal',
@@ -24,6 +24,6 @@ export default {
 
 
 <style scoped lang="scss">
-@import '../../color.scss';
+@import '../../../color.scss';
  
 </style>

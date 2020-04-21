@@ -1,5 +1,5 @@
 <template>
-    <div class="myAccount">
+    <div class="myAccount float-right">
         <b-icon-person></b-icon-person>
     </div>
 </template>
