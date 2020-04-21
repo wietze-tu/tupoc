@@ -40,6 +40,11 @@ a:hover {
 h1 {
   margin-top: 5px !important;
 }
+.login-container {
+  label {
+    margin-bottom: 0rem !important;
+  }
+}
 .dropdown-toggle::after {
     display: none !important;
 }

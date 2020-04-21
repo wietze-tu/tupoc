@@ -16,13 +16,13 @@
         </b-form-group>
 
         <b-form-group id="input-group-2" label="Wachtwoord:" label-for="password">
-            <b-form-input id="password" v-model="form.password" required ></b-form-input>
+            <b-form-input id="password" v-model="form.password" required type="password"></b-form-input>
         </b-form-group>
 
-        <b-button type="submit" variant="primary">Inloggen</b-button>
+        <b-button type="submit" class="btn-login">Inloggen</b-button>
 
         </b-form>
-            Klantnummer kwijt of uw wachtwoord vergeten?
+            <p>Klantnummer kwijt of uw wachtwoord vergeten?</p>
         </b-card-text>
     </b-card>
   </div>
@@ -35,12 +35,10 @@
     data() {
       return {
         form: {
-          email: '',
-          name: '',
-          food: null,
-          checked: []
+          client: '',
+          user: '',
+          password: ''          
         },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
         show: true
       }
     },
@@ -52,10 +50,9 @@
       onReset(evt) {
         evt.preventDefault()
         // Reset our form values
-        this.form.email = ''
-        this.form.name = ''
-        this.form.food = null
-        this.form.checked = []
+        this.form.client = ''
+        this.form.user = ''
+        this.form.password = ''
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
@@ -71,23 +68,44 @@
 .login-container {
     float: right;
     position: absolute;
-    top: -250px; 
+    top: -18rem; 
     right: 0px;
     z-index: 3;
+    .card {
+      border-radius: 0.25rem;
+    }
   .card-title {
-    font-size: 18px;
+    font-size: 1.12em;
     color: $tuGray;
     text-align: left;
     }
   
   .form-group {
     text-align: left;
-    font-size: 11px;
+    font-size: 0.9em;
+    margin-bottom: 0.4rem;
   }
   .form-control {
-    font-size: 0.9em;
+    font-size: 1em;
     height: auto;
   }
+  .card-text{
+    font-size: 0.8em;
+    p {
+      margin-top: 10px;
+    }
+  }
+  label {
+      margin-bottom: 0rem !important;
+    }
+  .btn-secondary {
+      background-color: $tuGreen;
+      border-color: $tuGreen;
+      font: bold 1.3em Arial;
+      line-height: 20px;
+      width: 100%;
+      margin-top: 10px;
+   }
 }
 .d-block {
      margin-bottom: 0rem !important;
