@@ -56,7 +56,9 @@
 	   ]}
 	   
 	],
-	"verlichting": [],
+	"users": [
+		{ "id":"101", "client": "12345", "name": "wietze", "password": "Welkom01" }
+	],
 	"none": []
 
 }
