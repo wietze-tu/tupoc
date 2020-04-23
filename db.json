@@ -57,8 +57,8 @@
 	   
 	],
 	"users": [
-		{ "id":"12345", "client": "12345", "name": "Wietze", "company":"Technischeunie b.v.", "password": "Welkom01" },
-		{ "id":"12346", "client": "12346", "name": "Rudy", "company":"ShareValue", "password": "Welkom01" }
+		{ "id":"12345", "client": "12345", "name": "Wietze Duursma", "company":"Technischeunie b.v.", "password": "Welkom01" },
+		{ "id":"12346", "client": "12346", "name": "Rudy de Jong", "company":"ShareValue", "password": "Welkom01" }
 	],
 	"none": []
 
