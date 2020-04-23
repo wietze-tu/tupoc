@@ -1,65 +1,77 @@
 <template>
-<div class="login-container">
+<div>
+<div class="login-container"  v-if="show">
       <b-card
-    title="Mijn Technische Unie"
-     style="max-width: 15rem;"
-    class="mb-3"
-  >
+          title="Mijn Technische Unie"
+          style="max-width: 15rem;"
+          class="mb-3"
+        >
         <b-card-text>
-        <b-form @submit="onSubmit" v-if="show">
-        <b-form-group id="input-group-1" label="Klantnummer:" label-for="client" >
-            <b-form-input id="client" v-model="form.client" required ></b-form-input>
-        </b-form-group>
+            <b-form @submit="onSubmit" >
+              <b-form-group id="input-group-1" label="Klantnummer:" label-for="client" >
+                  <b-form-input id="client" v-model="form.client" required ></b-form-input>
+              </b-form-group>
 
-        <b-form-group id="input-group-2" label="Gebruker:" label-for="user">
-            <b-form-input id="user" v-model="form.user" required ></b-form-input>
-        </b-form-group>
+              <b-form-group id="input-group-2" label="Gebruker:" label-for="user">
+                  <b-form-input id="user" v-model="form.user" required ></b-form-input>
+              </b-form-group>
 
-        <b-form-group id="input-group-2" label="Wachtwoord:" label-for="password">
-            <b-form-input id="password" v-model="form.password" required type="password"></b-form-input>
-        </b-form-group>
+              <b-form-group id="input-group-2" label="Wachtwoord:" label-for="password">
+                  <b-form-input id="password" v-model="form.password" required type="password"></b-form-input>
+              </b-form-group>
 
-        <b-button type="submit" class="btn-login">Inloggen</b-button>
+            <b-button type="submit" class="btn-login">Inloggen</b-button>
 
-        </b-form>
+            </b-form>
             <p>Klantnummer kwijt of uw wachtwoord vergeten?</p>
         </b-card-text>
     </b-card>
+  </div>
   </div>
 </template>
 
 
 <script>
+import { mapGetters, mapActions }  from 'vuex';
   export default {
     name: 'loginForm',
+    computed: mapGetters(['allClients']),
     data() {
       return {
         form: {
           client: '',
           user: '',
-          password: ''          
+          password: '' 
         },
         show: true
+
       }
     },
     methods: {
-      onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
+      onSubmit(event) {
+        event.preventDefault()
+        this.$http.get('https://my-json-server.typicode.com/wietze-tu/tupoc/users/'+ this.form.client ).then(function(data){
+        this.login = data.body;
+        if (data.status === 200 && this.form.password ==  this.login.password) {
+          this.$session.start();
+          this.$session.set('company', this.login.company);
+          this.$session.set('client', this.login.client);
+          this.$session.set('name', this.login.name);
+          this.show = false;
+          this.fetchClient(this.form.client);
+        }
+          }, data => {
+            console.log(data.status);
+        });
+
       },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.client = ''
-        this.form.user = ''
-        this.form.password = ''
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      }
-    }
+      ...mapActions(['fetchClient'])
+    },
+     created() {
+       if(this.$session.get('name')) {
+         this.show = false;
+       }
+     }
   }
 </script>
 

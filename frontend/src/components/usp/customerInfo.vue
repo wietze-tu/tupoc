@@ -1,29 +1,40 @@
 <template>
     <div class="welcome">
+
         <ul>
             <li class="welcomePersonal">
                 <section>
-                    
                     <div class="personal-details org-details">
-                        {{ lastName }} {{ customer }}
+                        {{allClients.name}} {{allClients.client}}
                     </div>
                     <div class="personal-details name-details">
-                        {{ company }}
+                        {{allClients.company}}
                     </div>
                 </section>
             </li>
         </ul>
+        
     </div>
 </template>
 
-<script lang="ts">
+<script>
+import { mapGetters, mapActions }  from 'vuex';
+
 export default  {
     name: 'customerInfo',
+    computed: mapGetters(['allClients']),
+    methods: {
+        ...mapActions(['fetchClient'])
+        
+    },
     data() {
         return {
-        lastName: 'Duursma',
-        company: 'Technischeunie',
-        customer: '1614499' 
+
+        }
+    },
+    created() {
+       if(this.$session.get('client')) {
+         this.fetchClient(this.$session.get('client'));
         }
     }
 
