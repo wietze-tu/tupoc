@@ -57,6 +57,13 @@ h1 {
 .dropdown-item {
     padding-bottom: 0px !important;
 }
+.myAccount {
+  .dropdown-menu-right {
+     left: 40px !important;
+     border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
 
 .nav-link, .dropdown-item{
   color: $tuGrayMenu !important;

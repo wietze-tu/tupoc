@@ -29,7 +29,7 @@ export default  {
     }
       
   },
-    name: 'Webshop',
+    name: 'home',
     components: {
       //'navigation': Nav,
       'vueSlider': Slider,
