@@ -6,7 +6,7 @@ const state  = {
 };
 
 const getters = {
-    allClients: (state) => state.client
+    myAccount: (state) => state.client
 };
 
 const actions = {

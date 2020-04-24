@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="myAccount.id">
     <my-shopping-card/>
     <my-favorites/>
     <my-account/>
@@ -7,12 +7,18 @@
 </template>
 
 <script lang="ts">
+import { mapGetters, mapActions }  from 'vuex';
 import MyShoppingCard from './myShoppingCard.vue'
 import MyAccount from './myAccount.vue'
 import Myfavorites from './myFavorites.vue'
 
+
 export default {
-    name: 'Ssbpersonal',
+    name: 'Personal',
+    computed: mapGetters(['myAccount']),
+    methods: {
+        ...mapActions(['fetchClient'])
+    },
     components: {
     'myShoppingCard': MyShoppingCard,
     'myAccount': MyAccount,

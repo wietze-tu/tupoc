@@ -5,10 +5,10 @@
             <li class="welcomePersonal">
                 <section>
                     <div class="personal-details org-details">
-                        {{allClients.name}} {{allClients.client}}
+                        {{myAccount.name}} {{myAccount.client}}
                     </div>
                     <div class="personal-details name-details">
-                        {{allClients.company}}
+                        {{myAccount.company}}
                     </div>
                 </section>
             </li>
@@ -22,7 +22,7 @@ import { mapGetters, mapActions }  from 'vuex';
 
 export default  {
     name: 'customerInfo',
-    computed: mapGetters(['allClients']),
+    computed: mapGetters(['myAccount']),
     methods: {
         ...mapActions(['fetchClient'])
         

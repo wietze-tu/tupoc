@@ -35,7 +35,7 @@
 import { mapGetters, mapActions }  from 'vuex';
   export default {
     name: 'loginForm',
-    computed: mapGetters(['allClients']),
+    computed: mapGetters(['myAccount']),
     data() {
       return {
         form: {
@@ -59,6 +59,7 @@ import { mapGetters, mapActions }  from 'vuex';
           this.$session.set('name', this.login.name);
           this.show = false;
           this.fetchClient(this.form.client);
+          this.$router.push("/webshop");
         }
           }, data => {
             console.log(data.status);
