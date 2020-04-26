@@ -10,8 +10,8 @@
     </div>
 </template>
 
-<script lang="ts">
-import { mapGetters }  from 'vuex';
+<script>
+import { mapGetters, mapActions }  from 'vuex';
 import { BIconPerson } from 'bootstrap-vue'
     export default {
         name: 'search',
@@ -19,11 +19,20 @@ import { BIconPerson } from 'bootstrap-vue'
         components: {
             BIconPerson
         },
+        data() {
+            return {
+                show: false
+            }
+        },
         methods: {
+            ...mapActions(['resetAccountState']),
             logout: function (id) {
                 console.log(id + 'logout');
+                 this.resetAccountState();
+                 this.$session.destroy()
+                 this.$router.push("/");
             }
-        } 
+        }
 }
 </script>
 
