@@ -78,6 +78,12 @@ export default {
   }
 
 }
+@media screen and (max-width: 1280px) {  
+  .logoSection {
+    width: 25%;
+    float: left;
+  }
+}
 @media screen and (max-width: 768px) { 
   #head {
     margin-top: 5px;

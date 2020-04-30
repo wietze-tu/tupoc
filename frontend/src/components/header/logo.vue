@@ -32,7 +32,7 @@ export default {
           background-image: url("../../assets/logo.png");
         }
   }
- @media screen and (max-width: 768px) { 
+ @media screen and (max-width: 1280px) { 
   .col-sm-3  {
     width: 25%;
   }

@@ -68,11 +68,11 @@ import { mapGetters, mapActions }  from 'vuex';
       },
       ...mapActions(['fetchClient'])
     },
-     created() {
-       if(this.$session.get('name')) {
-         this.show = false;
-       }
-     }
+    created() {
+      if(this.$session.get('name')) {
+        this.show = false;
+      }
+    }
   }
 </script>
 
@@ -126,5 +126,27 @@ import { mapGetters, mapActions }  from 'vuex';
 .card {
   background-color: rgba(554,254,254,0.9);
 
+}
+@media (max-width: 1280px){
+  .login-container {
+      float: right;
+      position: relative;
+      top: -10rem;
+      right: 0px;
+      z-index: 3;
+  }
+}
+@media (max-width: 768px){
+  .login-container {
+      float: left;
+      position: absolute;
+      top: inherit;
+      right: 0px;
+      z-index: 3;
+      width: 100%;
+  }
+  .card {
+    max-width: 100% !important;
+  }
 }
 </style>

@@ -5,7 +5,6 @@
         v-bind:menus="menus">
         </navigation>
     </div>
-    <h1>Webshop</h1>
   </div>
 </template>
 

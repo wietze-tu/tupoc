@@ -1,17 +1,11 @@
 <template>
   <div id="home">
-    <!-- 
-    <navigation 
-        v-bind:menus="menus">
-    </navigation>
-    -->
     <vue-slider/>
     <body-home/>
   </div>
 </template>
 
 <script lang="ts">
-//import Nav from './../components/menu/nav.vue'
 import Slider from '../components/slider/slider.vue'
 import Bodyhome from '../components/body/container_home.vue'
 

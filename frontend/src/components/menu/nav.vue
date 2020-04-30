@@ -180,5 +180,11 @@ nav.main-dropdown>ul>li.currentx {
     border-color: $tuWhite !important;
     margin-top: 8px;
   }
+  .dropdownContainer {
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+    padding-left: 20px;
+  }
 }
 </style>

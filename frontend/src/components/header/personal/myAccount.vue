@@ -54,5 +54,12 @@ import { BIconPerson } from 'bootstrap-vue'
         font-size: 11px;
     }
 }
+@media (max-width: 768px){ 
+    .myAccount {
+        top: 15px;
+        margin-right: 0px;
+        right: 0px;
+    }
+}
 
 </style>
