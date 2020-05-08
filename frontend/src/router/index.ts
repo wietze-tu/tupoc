@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import home from '../views/home.vue'
-import assortiment from '../views/webshop.vue'
-import services from '../views/services.vue'
+import home from '../pages/home.vue'
+import assortiment from '../pages/webshop.vue'
+import services from '../pages/services.vue'
 
 Vue.use(VueRouter)
 

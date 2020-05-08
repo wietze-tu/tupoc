@@ -1,0 +1,25 @@
+.form-group {
+    .form-control {
+        padding-left: 0.5rem;
+        height: 30px;
+        font-size: 12px;     
+    }
+    .form-control::placeholder { 
+            color: $tuGray;
+            opacity: 0.5; 
+        }
+    .form-control-icon {
+        position: absolute;
+        z-index: 0;
+        display: block;
+        top: 12px;
+        right: 20px;
+        width: 1.2rem;
+        height: 1.2rem;
+        line-height: 2.375rem;
+        text-align: center;
+        pointer-events: none;
+        color: $tuGrayLight;
+        float: right;
+    }
+}

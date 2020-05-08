@@ -1,27 +1,26 @@
 <template>
   <div id="app">
-    <stack-usp/>
-    <stack-header/>
+    <header-usp/>
+    <header-Top/>
     <router-view/>
   
   </div>
 </template>
 
 <script>
-import StackUsp from '@/components/usp/container_usp.vue'
-import StackHeader from '@/components/header/container_head.vue' 
+import HeaderUsp from '@/components/theme/blocks/HeaderUsp/container_usp'
+import HeaderTop from '@/layouts/layout_header' 
 
 export default {
   components: {
-    'StackUsp': StackUsp,
-    'StackHeader': StackHeader
+    HeaderUsp,
+    HeaderTop
   }
 }
 </script>
 
 <style lang="scss">
-@import './color.scss';
-@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import './css/main.scss';
 
 #app {
   font-family: Verdana,Arial,Ari,'Liberation Sans',FreeSans,sans-serif;
