@@ -3,5 +3,11 @@
 
 //Styles
 @import './base/color';
-@import './base/forms';
+@import './base/base';
+
+//layouts
 @import './layout/header';
+@import './layout/usp';
+
+//components
+@import './base/forms';

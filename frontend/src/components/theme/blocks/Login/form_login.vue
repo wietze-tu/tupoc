@@ -77,7 +77,6 @@ import { mapGetters, mapActions }  from 'vuex';
 </script>
 
 <style scoped lang="scss">
-@import '@/css/main.scss';
 .login-container {
     float: right;
     position: absolute;
@@ -87,38 +86,38 @@ import { mapGetters, mapActions }  from 'vuex';
     .card {
       border-radius: 0.25rem;
     }
-  .card-title {
-    font-size: 1.12em;
-    color: $tuGray;
-    text-align: left;
+    .card-title {
+      font-size: 1.12em;
+      color: $tuGray;
+      text-align: left;
+      }
+    
+    .form-group {
+      text-align: left;
+      font-size: 0.9em;
+      margin-bottom: 0.4rem;
     }
-  
-  .form-group {
-    text-align: left;
-    font-size: 0.9em;
-    margin-bottom: 0.4rem;
-  }
-  .form-control {
-    font-size: 1em;
-    height: auto;
-  }
-  .card-text{
-    font-size: 0.8em;
-    p {
-      margin-top: 10px;
+    .form-control {
+      font-size: 1em;
+      height: auto;
     }
-  }
-  label {
-      margin-bottom: 0rem !important;
+    .card-text{
+      font-size: 0.8em;
+      p {
+        margin-top: 10px;
+      }
     }
-  .btn-secondary {
-      background-color: $tuGreen;
-      border-color: $tuGreen;
-      font: bold 1.3em Arial;
-      line-height: 20px;
-      width: 100%;
-      margin-top: 10px;
-   }
+    label {
+        margin-bottom: 0rem !important;
+      }
+    .btn-secondary {
+        background-color: $tuGreen;
+        border-color: $tuGreen;
+        font: bold 1.3em Arial;
+        line-height: 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 .d-block {
      margin-bottom: 0rem !important;

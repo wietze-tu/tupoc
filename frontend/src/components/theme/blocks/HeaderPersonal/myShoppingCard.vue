@@ -15,7 +15,6 @@ import { Component, Vue } from 'vue-property-decorator';
 
 
 <style scoped lang="scss">
-@import '@/css/main.scss';
 div.shoppingCard {
     width: 40px;
     left: 1px;

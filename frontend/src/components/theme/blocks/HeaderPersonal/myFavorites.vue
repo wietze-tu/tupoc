@@ -15,7 +15,6 @@ import { BIconStar } from 'bootstrap-vue'
 </script>
 
 <style scoped lang="scss">
- @import '@/css/main.scss';
 .myfavorites {
     float: left;
     top: 20px;

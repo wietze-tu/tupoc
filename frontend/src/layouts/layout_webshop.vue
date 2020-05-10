@@ -10,14 +10,10 @@
 </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
     name: 'webshop'
 }
 </script>
 
 
-<style scoped lang="scss">
- @import '@/css/main.scss';
-
-</style>

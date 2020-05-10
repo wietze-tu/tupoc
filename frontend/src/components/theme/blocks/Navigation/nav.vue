@@ -37,8 +37,7 @@ export default {
 
 
 <style scoped lang="scss">
-@import '@/css/main.scss';
- #navigation {
+#navigation {
    .navcontainer{
    border-bottom: 1px solid $tuGrayBorder;
    }

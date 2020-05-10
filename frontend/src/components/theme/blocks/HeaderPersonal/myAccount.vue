@@ -37,7 +37,6 @@ import { BIconPerson } from 'bootstrap-vue'
 </script>
 
 <style scoped lang="scss">
- @import '@/css/main.scss';
 .myAccount {
     top: -15px;
     position: relative;

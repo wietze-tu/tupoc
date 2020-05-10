@@ -10,7 +10,7 @@
 import { mapGetters, mapActions }  from 'vuex';
 import MyShoppingCard from '@/components/theme/blocks/HeaderPersonal/myShoppingCard'
 import MyAccount from '@/components/theme/blocks/HeaderPersonal/myAccount'
-import Myfavorites from '../components/theme/blocks/HeaderPersonal/myFavorites'
+import MyFavorites from '../components/theme/blocks/HeaderPersonal/myFavorites'
 
 
 export default {
@@ -20,15 +20,12 @@ export default {
         ...mapActions(['fetchClient'])
     },
     components: {
-    'myShoppingCard': MyShoppingCard,
-    'myAccount': MyAccount,
-    'myFavorites': Myfavorites
+      MyShoppingCard,
+      MyAccount,
+      MyFavorites
     }
 }
 
 </script>
 
 
-<style scoped lang="scss">
- @import '@/css/main.scss';
-</style>

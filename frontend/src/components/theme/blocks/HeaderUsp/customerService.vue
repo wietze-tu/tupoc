@@ -12,7 +12,6 @@ export default {
 
 
 <style scoped lang="scss">
-@import '@/css/main.scss';
 
 .customerservice  {
     padding-left: 23px;

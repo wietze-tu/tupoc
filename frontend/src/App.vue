@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import HeaderUsp from '@/components/theme/blocks/HeaderUsp/container_usp'
+import HeaderUsp from '@/layouts/layout_header_usp'
 import HeaderTop from '@/layouts/layout_header' 
 
 export default {
@@ -22,69 +22,6 @@ export default {
 <style lang="scss">
 @import './css/main.scss';
 
-#app {
-  font-family: Verdana,Arial,Ari,'Liberation Sans',FreeSans,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: $tuGray;
-}
-a:link, a:visited{
-  color: $tuGreen
-}
-a:hover {
-    color: $tuGray;
-    text-decoration: underline;
-}
-h1 {
-  margin-top: 5px !important;
-}
-.login-container {
-  label {
-    margin-bottom: 0rem !important;
-  }
-}
-.dropdown-toggle::after {
-    display: none !important;
-}
-.dropdown-menu {
-  border: 0px !important;
-}
-.dropdown-item:hover, .dropdown-item:focus {
-  background-color: $tuWhite !important;
-}
-.dropdown-item {
-    padding-bottom: 0px !important;
-}
-.myAccount {
-  .dropdown-menu-right {
-     left: 40px !important;
-     border: 1px solid rgba(0, 0, 0, 0.15) !important;
-    }
-}
 
-
-.nav-link, .dropdown-item{
-  color: $tuGrayMenu !important;
-  padding-left: 0 !important;
-  padding-right: 1.8rem !important
-}
-
-
-@media (min-width: 1200px){
-.container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 960px !important;
-  } 
-}
-@media screen and (max-width: 768px) { 
- .mobile-hide { 
-    display: none; 
-  } 
-}
-@media screen and (min-width: 769px) { 
-  .desktop-hide {
-    display: none; 
-  }
-}
 
 </style>

@@ -17,7 +17,6 @@ export default {
 
 
 <style scoped lang="scss">
-@import '@/css/main.scss';
 
 .usp_line {
         text-align: left;

@@ -1,0 +1,26 @@
+div#usp-header {
+    min-height: 31px;
+    line-height: 31px;
+    margin: 5px auto;
+    overflow: hidden;
+    z-index: 999;
+    position: relative;
+    font-size: 11.2px;
+    a {
+        color: $tuGray;
+    }
+    a:hover {
+      color: $tuGray;
+      text-decoration: none;
+    }
+    .usp_line {
+        text-align: left;
+        word-wrap: normal;
+        white-space: nowrap;
+        display: inline-block;
+        font-family: 'Chilanka', cursive;
+        color: $tuGrayLight;
+        font-style: italic;
+    }
+    
+}

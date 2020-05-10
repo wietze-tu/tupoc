@@ -43,7 +43,6 @@ export default  {
 
 
 <style scoped lang="scss">
-@import '@/css/main.scss';
 .welcome ul {
     margin-bottom: 0;
     li {

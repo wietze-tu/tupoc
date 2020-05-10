@@ -35,7 +35,6 @@ export default {
 
 
 <style scoped lang="scss">
- @import '@/css/main.scss';
  .col-sm-3 {
      float: left;
  }

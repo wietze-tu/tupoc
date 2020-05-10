@@ -52,8 +52,6 @@ export default  {
 
 
 <style scoped lang="scss">
-@import '@/css/main.scss';
-
     h3 {
         line-height: 2.7em;
         font-size: 1.3em;
@@ -61,5 +59,4 @@ export default  {
         text-shadow: 1px 1px 2px $tuWhiteGray;
     }
 
- 
 </style>

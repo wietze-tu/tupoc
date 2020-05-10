@@ -8,4 +8,5 @@
 
 </script>
 
-<style lang="scss" src="theme/css/main.scss"></style>
+<style lang="scss" >
+</style>

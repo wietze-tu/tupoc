@@ -14,7 +14,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
- @import '@/css/main.scss';
 .headerLeft {
     float: left;
     padding-left: 0;
