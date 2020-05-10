@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Nav from '@/components/theme/blocks/Navigation/nav'
+import Nav from '@/components/core/blocks/Navigation/nav'
 
 export default  {
   data() {

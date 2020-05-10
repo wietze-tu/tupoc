@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import LoginForm from '@/components/theme/blocks/Login/form_login'
+import LoginForm from '@/components/core/blocks/Login/form_login'
 export default {
       name: 'bodyHome',
       components: {

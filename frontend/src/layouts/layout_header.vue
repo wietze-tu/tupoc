@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import Logo from '@/components/theme/blocks/Logo/logo'
-import MainNav from '@/components/theme/blocks/Navigation/mainNav'
-import Search from '@/components/theme/blocks/Search/search'
-import Personal from './layout_personal'
+import Logo from '@/components/core/logo'
+import MainNav from '@/components/core/blocks/Navigation/mainNav'
+import Search from '@/components/core/blocks/Search/search'
+import Personal from './layout_header_account'
 
 export default {
       name: 'Header',

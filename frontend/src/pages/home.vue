@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Slider from '@/components/theme/blocks/HeaderHero/slider'
+import Slider from '@/components/core/blocks/HeaderHero/slider'
 import BodyHome from '../layouts/layout_home'
 
 

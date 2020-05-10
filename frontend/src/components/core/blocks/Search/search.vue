@@ -18,7 +18,6 @@ import { BIconSearch } from 'bootstrap-vue'
 </script>
 
 <style scoped lang="scss">
-
 .search {
     .form-group { 
         margin-top: 20px;

@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import CustomerService from '@/components/theme/blocks/HeaderUsp/customerService'
-import ServiceLine from '@/components/theme/blocks/HeaderUsp/serviceLine'
-import CustomerInfo from '@/components/theme/blocks/HeaderUsp/customerInfo' 
+import CustomerService from '@/components/core/customerService'
+import ServiceLine from '@/components/core/serviceLine'
+import CustomerInfo from '@/components/core/customerInfo' 
 
 export default  {
     name: 'HeaderUsp',

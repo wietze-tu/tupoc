@@ -8,9 +8,9 @@
 
 <script>
 import { mapGetters, mapActions }  from 'vuex';
-import MyShoppingCard from '@/components/theme/blocks/HeaderPersonal/myShoppingCard'
-import MyAccount from '@/components/theme/blocks/HeaderPersonal/myAccount'
-import MyFavorites from '../components/theme/blocks/HeaderPersonal/myFavorites'
+import MyShoppingCard from '@/components/core/blocks/HeaderAccount/myShoppingCard'
+import MyAccount from '@/components/core/blocks/HeaderAccount/myAccount'
+import MyFavorites from '../components/core/blocks/HeaderAccount/myFavorites'
 
 
 export default {

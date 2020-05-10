@@ -28,7 +28,7 @@ export default {
         .logo {
           height: 43px;
           width: 233px;
-          background-image: url("../../../../assets/logo.png");
+          background-image: url("../../assets/logo.png");
         }
   }
  @media screen and (max-width: 1280px) { 
@@ -39,7 +39,7 @@ export default {
         .logo {
           height: 43px;
           width: 53px;
-          background-image: url("../../../../assets/logo-mobile.png");
+          background-image: url("../../assets/logo-mobile.png");
           background-repeat: no-repeat;
         }
   }
