@@ -9,11 +9,11 @@
         <b-card-text>
             <b-form @submit="onSubmit" >
               <b-form-group id="input-group-1" label="Klantnummer:" label-for="client" >
-                  <b-form-input id="client" v-model="form.client" required ></b-form-input>
+                  <b-form-input id="client" v-model="form.customerNumber" required ></b-form-input>
               </b-form-group>
 
               <b-form-group id="input-group-2" label="Gebruker:" label-for="user">
-                  <b-form-input id="user" v-model="form.user" required ></b-form-input>
+                  <b-form-input id="user" v-model="form.userName" required ></b-form-input>
               </b-form-group>
 
               <b-form-group id="input-group-2" label="Wachtwoord:" label-for="password">
@@ -39,9 +39,11 @@ import { mapGetters, mapActions }  from 'vuex';
     data() {
       return {
         form: {
-          client: '',
-          user: '',
-          password: '' 
+          customerNumber: '',
+          userName: '',
+          password: '',
+          grant_type: '',
+          captchaText: ''
         },
         show: true
 
@@ -50,7 +52,7 @@ import { mapGetters, mapActions }  from 'vuex';
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        this.$http.get('https://my-json-server.typicode.com/wietze-tu/tupoc/users/'+ this.form.client ).then(function(data){
+        this.$http.get('https://my-json-server.typicode.com/wietze-tu/tupoc/users/'+ this.form.customerNumber).then(function(data){
         this.login = data.body;
         if (data.status === 200 && this.form.password ==  this.login.password) {
           this.$session.start();
