@@ -42,7 +42,7 @@ import { mapGetters, mapActions }  from 'vuex';
           customerNumber: '',
           userName: '',
           password: '',
-          grant_type: '',
+          grantType: '',
           captchaText: ''
         },
         show: true
