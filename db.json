@@ -1,4 +1,3 @@
-{
 "kabel": [
 		{ "id":"0001",
 		  "name":"Energiekabels",
@@ -58,8 +57,14 @@
 	],
 	"users": [
 		{ "id":"12345", "client": "12345", "name": "Wietze Duursma", "company":"Technischeunie b.v.", "password": "Welkom01" },
-		{ "id":"12346", "client": "12346", "name": "Rudy de Jong", "company":"ShareValue", "password": "Welkom01" }
+		{ "id":"12346", "client": "12346", "name": "Mukul Goel", "company":"technischeunie b.v.", "password": "Welkom01" }
 	],
+	"Products": [
+		{ "id":"1", "name": "Electrotechniek", "description": "Ons aanbod elektrotechniek vindt u overzichtelijk weergegeven op onze website. U vindt bij ons een ruime keuze aan:", "url":"#" },
+		{ "id":"2", "name": "verwarming & klimaat", "description": "Functioneel, design, woningbouw of utiliteit, Technische Unie levert een compleet assortiment verwarming en klimaat techniek", "url":"#" },
+		{ "id":"3", "name": "Sanitair", "description": "Luxe badmeubels, aangepast sanitair, functionele inrichting van sanitaire ruimte. technische Unie heeft een zeer breed assortiment", "url":"#" },
+		{ "id":"4", "name": "Gereedschap", "description": "Technische unie levert gereedschap voor de elektro, sanitair- en verwarmingsmonteur en voor de industriële gebruiker", "url":"#" },
+		]
 	"none": []
 
 }
