@@ -180,24 +180,28 @@
 	],
 	"assortment": [{
 			"id": "1",
+			"color":"green",
 			"title": "Electrotechniek",
 			"description": "Ons aanbod elektrotechniek vindt u overzichtelijk weergegeven op onze website. U vindt bij ons een ruime keuze aan:",
 			"url": "#"
 		},
 		{
 			"id": "2",
+			"color":"red",
 			"title": "verwarming & klimaat",
 			"description": "Functioneel, design, woningbouw of utiliteit, Technische Unie levert een compleet assortiment verwarming en klimaat techniek",
 			"url": "#"
 		},
 		{
 			"id": "3",
+			"color":"aqua",
 			"title": "Sanitair",
 			"description": "Luxe badmeubels, aangepast sanitair, functionele inrichting van sanitaire ruimte. technische Unie heeft een zeer breed assortiment",
 			"url": "#"
 		},
 		{
 			"id": "4",
+			"color":"blue",
 			"title": "Gereedschap",
 			"description": "Technische unie levert gereedschap voor de elektro, sanitair- en verwarmingsmonteur en voor de industriële gebruiker",
 			"url": "#"
