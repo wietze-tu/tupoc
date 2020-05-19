@@ -1,4 +1,5 @@
 import axios from 'axios';
+import api from '../../constants/api';
 
 const getDefaultState = () => {
     return {
@@ -16,9 +17,8 @@ const actions = {
     resetAccountState ({ commit }) {
         commit('resetState')
       },
-    // eslint-disable-next-line
     async fetchClient( {commit}, user) {
-        const response = await axios.get('https://my-json-server.typicode.com/wietze-tu/tupoc/users/'+user);
+        const response = await axios.get(api.getUser +'/'+ user);
             commit('setClient', response.data);
     }
 };

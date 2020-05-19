@@ -33,6 +33,8 @@
 
 <script>
 import { mapGetters, mapActions }  from 'vuex';
+import api from '@/constants/api'
+
   export default {
     name: 'loginForm',
     computed: mapGetters(['myAccount']),
@@ -52,19 +54,20 @@ import { mapGetters, mapActions }  from 'vuex';
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        this.$http.get('https://my-json-server.typicode.com/wietze-tu/tupoc/users/'+ this.form.customerNumber).then(function(data){
-        this.login = data.body;
-        if (data.status === 200 && this.form.password ==  this.login.password) {
-          this.$session.start();
-          this.$session.set('company', this.login.company);
-          this.$session.set('client', this.login.client);
-          this.$session.set('name', this.login.name);
-          this.show = false;
-          this.fetchClient(this.form.client);
-          this.$router.push("/webshop");
-        }
-          }, data => {
-            console.log(data.status);
+        this.$http.get(api.getUser +'/'+ this.form.customerNumber).then((data)=>{
+        this.login = data;
+        console.log(data);
+          if (this.login.status === 200 && this.form.password ==  this.login.data.password) {
+            this.$session.start();
+            this.$session.set('company', this.login.data.company);
+            this.$session.set('client', this.login.data.client);
+            this.$session.set('name', this.login.data.name);
+            this.show = false;
+            this.fetchClient(this.form.customerNumber);
+            this.$router.push("/webshop");
+          }
+        }).catch(function (error) {
+            console.log(error.response.status);
         });
 
       },

@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import HeaderUsp from '@/layouts/layout_header_usp'
-import HeaderTop from '@/layouts/layout_header' 
+import HeaderUsp from '@/layouts/blocks/layout_header_usp'
+import HeaderTop from '@/layouts/blocks/layout_header' 
 
 export default {
   components: {
@@ -21,7 +21,4 @@ export default {
 
 <style lang="scss">
 @import './css/main.scss';
-
-
-
 </style>

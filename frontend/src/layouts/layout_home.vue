@@ -4,6 +4,7 @@
       <div class="row ">
         <div class="col-sm-12 ">
                 <login-Form/>
+                
         </div>
     </div>
   </div>
@@ -12,10 +13,12 @@
 
 <script>
 import LoginForm from '@/components/core/blocks/Login/form_login'
+
+
 export default {
       name: 'bodyHome',
       components: {
-          'loginForm': LoginForm
+         LoginForm,
       }
 }
 </script>

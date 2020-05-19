@@ -29,7 +29,7 @@
 
 <script>
 import Logo from '@/components/core/logo'
-import MainNav from '@/components/core/blocks/Navigation/mainNav'
+import MainNav from '@/components/core/blocks/Navigation/mainNavigation'
 import Search from '@/components/core/blocks/Search/search'
 import Personal from './layout_header_account'
 

@@ -2,16 +2,16 @@
   <div id="webshop">
     <div id="navigation">
       <navigation 
-        v-bind:menus="menus">
+        :menus="menus">
       </navigation>
-      <body-webshop/>
+      <layout-webshop/>
     </div>
   </div>
 </template>
 
 <script>
-import Nav from '@/components/core/blocks/Navigation/nav'
-import BodyWebshop from '@/layouts/layout_webshop'
+import navigation from '@/components/core/blocks/Navigation/nav'
+import layoutWebshop from '@/layouts/layout_webshop'
 
 export default  {
   data() {
@@ -32,8 +32,8 @@ export default  {
   },
     name: 'Webshop',
     components: {
-      'navigation': Nav,
-      'bodyWebshop': BodyWebshop
+      navigation,
+      layoutWebshop
     }
 }
 </script>

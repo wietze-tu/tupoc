@@ -10,7 +10,7 @@
 import { mapGetters, mapActions }  from 'vuex';
 import MyShoppingCard from '@/components/core/blocks/HeaderAccount/myShoppingCard'
 import MyAccount from '@/components/core/blocks/HeaderAccount/myAccount'
-import MyFavorites from '../components/core/blocks/HeaderAccount/myFavorites'
+import MyFavorites from '@/components/core/blocks/HeaderAccount/myFavorites'
 
 
 export default {

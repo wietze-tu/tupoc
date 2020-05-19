@@ -12,22 +12,24 @@
 </template>
 
 <script>
+import api from '@/constants/api'
 export default {
+
     props: ['submenus'],
     data() {
       return {
-        activeMenu: []
+        activeMenu: [] 
       }
     },
     methods: {
 
     },
     created() {
-      this.$http.get('https://my-json-server.typicode.com/wietze-tu/tupoc/'+ this.submenus ).then(function(data){
-        this.activeMenu = data.body;
-      }, data => {
-        console.log(data.status);
-     });
+        this.$http.get(api.getSubmenu +'/'+ this.submenus).then((response) => {
+        this.activeMenu = response.data
+        }).catch(function (error) {
+            console.log(error.response.status);
+        });
     }
 }
 

@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import submenuItem from './submenuitems.vue'
-import mainNav from './mainNav.vue'
+import mainNav from './mainNavigation.vue'
 export default {
   props: ['menus', 'submenukabel'],
   data() {
