@@ -1,5 +1,5 @@
 <template>
-  <div id="products">
+  <div id="webshop">
     <div id="navigation">
       <navigation 
         :menus="menus">

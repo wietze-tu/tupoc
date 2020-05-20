@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import home from '../pages/home.vue'
-import webshop from '../pages/webshop.vue'
+import assortment from '../pages/assortment.vue'
 import services from '../pages/services.vue'
 import products from '../pages/products.vue'
 
@@ -21,7 +21,7 @@ const routes = [
    {
      path: '/webshop', 
      name: 'Webshop',
-     component: webshop,
+     component: assortment,
   },
   {
      path: '/services', 

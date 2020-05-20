@@ -16,9 +16,12 @@
                         {{ assortment.description }}
                     </div>
                     <p class="bottom-link desktop-only">
-                        <router-link v-bind:to="assortment.url"  class="assortment-widget-detail-link" >                       
-                        </router-link> 
-                        <router-link v-bind:to="'products/'+assortment.id"  class="assortment-widget-detail-link" >
+
+                        <router-link v-bind:to="'products/'+assortment.id"  class="assortment-widget-detail-link-button" >
+                            <b-iconstack font-scale="1" class="icon">
+                                <b-icon stacked icon="circle-fill" variant=""></b-icon>
+                                <b-icon stacked icon="chevron-right" shift-h="1" scale="0.9" variant="white"></b-icon>
+                            </b-iconstack>
                             {{ assortment.title}}  
                         </router-link>    
                     </p>
@@ -50,6 +53,9 @@ import api from '@/constants/api';
 </script>
 
 <style scoped lang="scss">
+.icon {
+    margin-left: 5px;
+}
 
 article {
         float: left;
@@ -104,6 +110,10 @@ article {
         }
     :hover {
         text-decoration: none;
+    }
+    .assortment-widget-detail-link-button {
+        font-size: 12px;
+            line-height: 30px;
     }
     
 }

@@ -2,7 +2,7 @@
     <div id="products">
         <h5>products</h5>
          {{ $route.params.id }}
-         <div v-for="product in products" :key="product.id" class="tile-product small compare" id="scroll-to-4772006" :data-id="product.id">
+         <div v-for="product in productlist" :key="product.id" class="tile-product small compare" id="scroll-to-4772006" :data-id="product.id">
             <div class="col-sm-2">
                 image placeholder
             </div>
@@ -33,7 +33,7 @@ import api from '@/constants/api';
         data() {
             return {
                 cat: this.$route.params.id,
-                products: []
+                productlist: []
             }
         },
         computed: mapGetters(['products']),
@@ -41,7 +41,7 @@ import api from '@/constants/api';
             console.log(this.cat);
             console.log(api.getProducts)
             this.$http.get(api.getProducts +'?category='+this.cat).then((response) => {
-                this.products = response.data
+                this.productlist = response.data
             }).catch(function (error) {
                 console.log(error.response.status);
             });
