@@ -7,6 +7,8 @@
         text-align: left;
     }
     ul {
+        text-align: left;
+        padding: 0;
     &>li {
         float: left;
         position: relative;
@@ -19,16 +21,30 @@
         margin-bottom: 10px;
         overflow: hidden;
         letter-spacing: -1px;
+        a.assortment-icon {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            z-index: 1;
+            background: url(https://accept.ocp.technischeunie.nl//static/images/sprites/assortment.png) 0 0 no-repeat;
+            min-height: 24px;
+                &.green {
+                    background-position: 0 -34px;
+                }
+                &.red {
+                    background-position: 0 -204px;
+                }
+            }
         }
     }
     .dimensions {
-    
     width: auto;
     height: auto;
         figure {
            border: 1px solid $tuGrayBorder; 
            img {
             padding: 20px 19px;
+            width: 100%;
             }
         }
         .overlay {
@@ -39,7 +55,7 @@
             position: absolute;
             left: 0;
             bottom: 8PX;
-            color: #fff;
+            color: $tuWhite;
             width: 100%;
             background-color: rgba(0,0,0,.5);
             text-align: center;

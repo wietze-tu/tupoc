@@ -6,6 +6,7 @@
             <li v-for="assortment in assortments" :key="assortment.id" >
                 <router-link :to="id +'/'+assortment.id"  class="" >
                     <div class="product-image dimensions small-image">
+                        <a class="assortment-icon" :class="color" :title="globalAssortment">*</a>
                         <figure>
                             <img :src="imageUrl + assortment.img" :alt="assortment.title">
                             <figcaption class="overlay">
@@ -19,7 +20,6 @@
     </div>
 </div>
 </template>
-
 <script>
 import api from '@/constants/api';
 import settings from '@/constants/settings';
@@ -36,6 +36,8 @@ import settings from '@/constants/settings';
         },
         created() {   
             this.$http.get(api.getAssortment +'?id='+this.id).then((response) => {
+                this.color = response.data[0].color;
+                this.globalAssortment = response.data[0].title;
                 this.assortments = response.data[0].child
                 if (this.id2) { 
                     for (let _i=0 ; _i< this.assortments.length; _i++) {
