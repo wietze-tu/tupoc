@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <header-usp/>
-    <header-Top/>
+    <header-General/>
     <router-view/>
   
   </div>
 </template>
 
 <script>
-import HeaderUsp from '@/layouts/blocks/layout_header_usp'
-import HeaderTop from '@/layouts/blocks/layout_header' 
+import HeaderUsp from '@/layouts/blocks/layoutHeaderUsp'
+import HeaderGeneral from '@/layouts/blocks/layoutHeader' 
 
 export default {
   components: {
     HeaderUsp,
-    HeaderTop
+    HeaderGeneral
   }
 }
 </script>

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import LoginForm from '@/components/core/blocks/Login/form_login'
+import LoginForm from '@/components/core/blocks/Login/formLogin'
 
 
 export default {

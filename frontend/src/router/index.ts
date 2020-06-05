@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import home from '../pages/home.vue'
-import assortment from '../pages/assortment.vue'
+import assortmentPage from '../pages/assortment.vue'
 import services from '../pages/services.vue'
-import products from '../pages/products.vue'
+import productsPage from '../pages/products.vue'
 
-//import assortmentoverview from '../components/core/blocks/Assortment/assortmentOverview.vue' 
-import productsoverview from '../components/core/blocks/Products/productsOverview.vue' 
+import assortmentGlobalOverview from '../components/core/blocks/Assortment/assortmentGlobalOverview.vue' 
+import assortmentFirstSubOverview from '../components/core/blocks/Assortment/assortmentFirstSubOverview.vue'
+import assortmentSecondSubOverview from '../components/core/blocks/Assortment/assortmentSecondSubOverview.vue'
+import productsOverview from '../components/core/blocks/Products/productsOverview.vue' 
 
 Vue.use(VueRouter)
 
@@ -21,7 +23,7 @@ const routes = [
    {
      path: '/webshop', 
      name: 'Webshop',
-     component: assortment,
+     component: assortmentPage,
   },
   {
      path: '/services', 
@@ -31,18 +33,23 @@ const routes = [
     } 
   },
   {
-    path: '/products/:id', 
-    name: 'products',
-    component: products,
+    path: '/assortment', 
+    name: 'assortment',
+    component: assortmentPage,
     children: [
-          {
-          path: '/',
-          component: productsoverview
-          }
-        
-      ]
-   } 
-
+          { path: '/assortment', component: assortmentGlobalOverview },
+          { path: '/assortment/:id', component: assortmentFirstSubOverview},
+          { path: '/assortment/:id/:id2', component: assortmentSecondSubOverview}
+          ]
+   },
+  {
+    path: '/products/:category', 
+    name: 'products',
+    component: productsPage,
+    children: [
+          { path: '/', component: productsOverview}
+          ]
+   }
 ]
 
 const router = new VueRouter({

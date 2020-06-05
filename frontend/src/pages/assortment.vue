@@ -4,14 +4,14 @@
       <navigation 
         :menus="menus">
       </navigation>
-      <layout-webshop/>
+      <layout-assortment/>
     </div>
   </div>
 </template>
 
 <script>
 import navigation from '@/components/core/blocks/Navigation/nav'
-import layoutWebshop from '@/layouts/layout_assortment'
+import layoutAssortment from '@/layouts/layoutAssortment'
 
 export default  {
   data() {
@@ -33,7 +33,7 @@ export default  {
     name: 'Webshop',
     components: {
       navigation,
-      layoutWebshop
+      layoutAssortment
     }
 }
 </script>

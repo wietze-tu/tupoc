@@ -2,8 +2,8 @@
 <div  id="bodyhome">
   <div class="container">
       <div class="row ">
-        <div class="col-sm-12 ">
-            <webshop-Overview />
+        <div class="col-sm-12">
+            <router-view />
         </div>
     </div>
   </div>
@@ -11,13 +11,10 @@
 </template>
 
 <script>
-import WebshopOverview from '@/components/core/blocks/Assortment/assortmentOverview'
 export default {
-    name: 'webshop',
+    name: 'layout_assortment',
     components: {
-      WebshopOverview
       }
 }
 </script>
-
 

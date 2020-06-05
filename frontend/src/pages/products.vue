@@ -11,7 +11,7 @@
 
 <script>
 import navigation from '@/components/core/blocks/Navigation/nav'
-import layoutProducts from '@/layouts/layout_products'
+import layoutProducts from '@/layouts/layoutProducts'
 
 export default  {
   data() {

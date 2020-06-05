@@ -15,7 +15,7 @@
       data() {
       return {
           mainMenus: [
-          { "id":"01", "name": "Webshop", "url": "/webshop" },
+          { "id":"01", "name": "Webshop", "url": "/assortment" },
           { "id":"02", "name": "Diensten", "url": "/services" },
           { "id":"03", "name": "Nieuws", "url": "/news" }
           ]

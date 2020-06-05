@@ -1,13 +1,13 @@
 <template>
   <div id="home">
     <slider/>
-    <body-home/>
+    <layout-home/>
   </div>
 </template>
 
 <script>
-import Slider from '@/components/core/blocks/HeaderHero/slider'
-import BodyHome from '../layouts/layout_home'
+import slider from '@/components/core/blocks/HeaderHero/hero'
+import layoutHome from '../layouts/layoutHome'
 
 
 export default  {
@@ -19,8 +19,8 @@ export default  {
   },
     name: 'home',
     components: {
-      Slider,
-      BodyHome
+      slider,
+      layoutHome
     }
 }
 </script>

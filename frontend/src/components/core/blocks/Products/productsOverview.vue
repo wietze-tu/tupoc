@@ -1,7 +1,5 @@
 <template>
     <div id="products">
-        <h5>products</h5>
-         {{ $route.params.id }}
          <div v-for="product in productlist" :key="product.id" class="tile-product small compare" id="scroll-to-4772006" :data-id="product.id">
             <div class="col-sm-2">
                 image placeholder
@@ -32,15 +30,16 @@ import api from '@/constants/api';
         name: 'products',
         data() {
             return {
-                cat: this.$route.params.id,
+                category: this.$route.params.category,
+                articleCat: this.$route.params.articleCat,
                 productlist: []
             }
         },
         computed: mapGetters(['products']),
         created() {
-            console.log(this.cat);
-            console.log(api.getProducts)
-            this.$http.get(api.getProducts +'?category='+this.cat).then((response) => {
+            console.log(this.category);
+            console.log(this.articleCat)
+            this.$http.get(api.getProducts +'?category='+this.category).then((response) => {
                 this.productlist = response.data
             }).catch(function (error) {
                 console.log(error.response.status);
@@ -51,23 +50,28 @@ import api from '@/constants/api';
 </script>
 
 <style scoped lang="scss">
-.tile-product > div {
-    float: left;
+.tile-product{
     min-height: 90px;
+        &:first-child {
+            margin-top: 50px;
+        }
+        > div {
+            float: left;
+            min-height: 90px;
+        }
+        .products {
+            font-size: 11px;
+            line-height: 15px;
+            text-align: left;
+            h6 {
+                color: $tuGreen;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            div {
+                float: left;
+            }
+    }
 }
-.products {
-    font-size: 11px;
-    line-height: 15px;
-    text-align: left;
-    h6 {
-        color: $tuGreen;
-    }
-    p {
-        margin-bottom: 0;
-    }
-     div {
-        float: left;
-    }
-}
-
 </style>

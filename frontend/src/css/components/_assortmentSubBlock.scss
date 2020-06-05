@@ -1,0 +1,48 @@
+#visual-search-results {
+    h2 {
+        font: 19px Arial;
+        font-weight: bold;
+        color: $tuGreen;
+        margin: 5px 0 15px;
+        text-align: left;
+    }
+    ul {
+    &>li {
+        float: left;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        margin-left: 20px;
+        height: 150px;
+        width: 140px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        letter-spacing: -1px;
+        }
+    }
+    .dimensions {
+    
+    width: auto;
+    height: auto;
+        figure {
+           border: 1px solid $tuGrayBorder; 
+           img {
+            padding: 20px 19px;
+            }
+        }
+        .overlay {
+            height: 30px;
+            font-size: 11px;
+            line-height: 10px;
+            padding-top: 5px;
+            position: absolute;
+            left: 0;
+            bottom: 8PX;
+            color: #fff;
+            width: 100%;
+            background-color: rgba(0,0,0,.5);
+            text-align: center;
+        }
+    }
+}

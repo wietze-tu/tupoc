@@ -31,7 +31,7 @@
 import Logo from '@/components/core/logo'
 import MainNav from '@/components/core/blocks/Navigation/mainNavigation'
 import Search from '@/components/core/blocks/Search/search'
-import Personal from './layout_header_account'
+import Personal from './layoutHeaderAcount'
 
 export default {
       name: 'Header',

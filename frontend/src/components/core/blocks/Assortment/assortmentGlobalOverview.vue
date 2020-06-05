@@ -17,7 +17,7 @@
                     </div>
                     <p class="bottom-link desktop-only">
 
-                        <router-link v-bind:to="'products/'+assortment.id"  class="assortment-widget-detail-link-button" >
+                        <router-link v-bind:to="'assortment/'+assortment.id"  class="assortment-widget-detail-link-button" >
                             <b-iconstack font-scale="1" class="icon">
                                 <b-icon stacked icon="circle-fill" variant=""></b-icon>
                                 <b-icon stacked icon="chevron-right" shift-h="1" scale="0.9" variant="white"></b-icon>
@@ -60,11 +60,15 @@ import api from '@/constants/api';
 article {
         float: left;
         margin-top: 20px;
+        margin-right: 12px;
         text-align: left;
+        padding: 0;
+        max-width: 220px;
         .assortment-widget-detail {
-            background: linear-gradient(to bottom,#fff,#ededed);
+            background: linear-gradient(to bottom,$tuWhite,$tuWhiteGray);
         }
         h2 {
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
             text-shadow: 1px 1px #333;
             line-height: 17px;
@@ -97,16 +101,25 @@ article {
             }
         }
         .green{
-            background: $tuGreen;
+            background: $tuAssortmentGreen;
             }
         .red {
-            background: $tuRed;
+            background: $tuAssortmentRed;
         }
         .blue {
-            background: $tuBlue;
+            background: $tuAssortmentBlue;
         }
         .aqua {
-            background: $tuAqua;
+            background: $tuAssortmentAqua;
+        }
+        .orange {
+            background: $tuAssortmentOrange;
+        }
+        .purple {
+            background: $tuAssortmentPurple;
+        }
+        .yellow {
+            background: $tuAssortmentYellow;
         }
     :hover {
         text-decoration: none;
@@ -116,5 +129,12 @@ article {
             line-height: 30px;
     }
     
+}
+@media only screen and (max-width: 600px) {
+    article {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+    }
 }
 </style>

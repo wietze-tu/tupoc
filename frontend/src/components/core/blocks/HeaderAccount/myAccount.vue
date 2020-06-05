@@ -14,7 +14,7 @@
 import { mapGetters, mapActions }  from 'vuex';
 import { BIconPerson } from 'bootstrap-vue'
     export default {
-        name: 'search',
+        name: 'myAccount',
         computed: mapGetters(['myAccount']),
         components: {
             BIconPerson
@@ -27,7 +27,7 @@ import { BIconPerson } from 'bootstrap-vue'
         methods: {
             ...mapActions(['resetAccountState']),
             logout: function (id) {
-                console.log(id + 'logout');
+                 console.log(id + 'logout');
                  this.resetAccountState();
                  this.$session.destroy()
                  this.$router.push("/");

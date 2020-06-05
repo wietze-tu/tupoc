@@ -21,7 +21,7 @@
 
 <script lang="ts">
 export default  {
-    name: 'slider',
+    name: 'hero',
     data() {
         return {
             carouselItems: [

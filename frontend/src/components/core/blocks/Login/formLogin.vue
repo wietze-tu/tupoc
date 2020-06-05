@@ -56,7 +56,6 @@ import api from '@/constants/api'
         event.preventDefault()
         this.$http.get(api.getUser +'/'+ this.form.customerNumber).then((data)=>{
         this.login = data;
-        console.log(data);
           if (this.login.status === 200 && this.form.password ==  this.login.data.password) {
             this.$session.start();
             this.$session.set('company', this.login.data.company);

@@ -165,6 +165,7 @@ nav.main-dropdown>ul>li.currentx {
   nav.main-dropdown {
       position: absolute;
       top: 100px;
+      z-index: 10;
       button {
         position: fixed;
         top: 0px;
@@ -184,6 +185,8 @@ nav.main-dropdown>ul>li.currentx {
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
     z-index: 99999;
     padding-left: 20px;
+    z-index: 11;
+    position: absolute;
   }
 }
 </style>
