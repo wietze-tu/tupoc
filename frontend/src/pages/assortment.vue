@@ -1,8 +1,7 @@
 <template>
   <div id="webshop">
     <div id="navigation">
-      <navigation 
-        :menus="menus">
+      <navigation :menus="menus">
       </navigation>
       <layout-assortment/>
     </div>
@@ -10,7 +9,7 @@
 </template>
 
 <script>
-import navigation from '@/components/core/blocks/Navigation/nav'
+import navigation from '../components/core/blocks/Navigation/navigation'
 import layoutAssortment from '@/layouts/layoutAssortment'
 
 export default  {

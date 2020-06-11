@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import navigation from '@/components/core/blocks/Navigation/nav'
+import navigation from '@/components/core/blocks/Navigation/navigation'
 import layoutProducts from '@/layouts/layoutProducts'
 
 export default  {

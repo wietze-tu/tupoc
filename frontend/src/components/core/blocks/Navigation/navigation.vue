@@ -5,7 +5,7 @@
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-              <mainNav class="desktop-hide"></mainNav>
+              <navigation-header class="desktop-hide"></navigation-header>
                 <b-nav-item-dropdown  v-for="menu in menus" v-bind:key="menu.id" v-bind:text="menu.name"  >
                   <submenu-Item v-if="menu.sm" v-bind:submenus="menu.sm" class="dropdownContainer">
                   </submenu-Item>
@@ -18,8 +18,8 @@
 </template>
 
 <script lang="ts">
-import submenuItem from './submenuitems.vue'
-import mainNav from './mainNavigation.vue'
+import submenuItem from './navigationSubItems.vue'
+import navigationHeader from './navigationHeader.vue'
 export default {
   props: ['menus', 'submenukabel'],
   data() {
@@ -29,7 +29,7 @@ export default {
   name: 'navigation',
   components: {
     submenuItem,
-    mainNav
+    navigationHeader
   }
 }
 

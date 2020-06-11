@@ -3,7 +3,7 @@
       <ul id="normal-main">
         <li v-for="menu in mainMenus" v-bind:key="menu.id" class="nav-menu"> 
           <router-link v-bind:to="menu.url">
-            {{ menu.name }}  
+            {{ menu.name }} 
           </router-link> 
         </li>
       </ul>

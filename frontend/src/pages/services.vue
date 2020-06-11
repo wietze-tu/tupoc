@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Nav from '@/components/core/blocks/Navigation/nav'
+import navigation from '@/components/core/blocks/Navigation/navigation'
 
 export default  {
   data() {
@@ -24,7 +24,7 @@ export default  {
   },
     name: 'Webshop',
     components: {
-      'navigation': Nav
+      navigation
     }
 }
 </script>

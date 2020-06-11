@@ -24,6 +24,9 @@ const routes = [
      path: '/webshop', 
      name: 'Webshop',
      component: assortmentPage,
+     children: [
+      { path: '/', component: assortmentGlobalOverview }
+      ]
   },
   {
      path: '/services', 

@@ -8,7 +8,7 @@
         </div>
         <div class="col-sm-3 navSection mobile-hide">
           <!-- main menu -->
-            <mainNav/>
+            <navigation-header/>
         </div>
         <div class="col-sm-2 personalSectionMobile">
           <!-- personal menu -->
@@ -29,7 +29,7 @@
 
 <script>
 import Logo from '@/components/core/logo'
-import MainNav from '@/components/core/blocks/Navigation/mainNavigation'
+import navigationHeader from '@/components/core/blocks/Navigation/navigationHeader'
 import Search from '@/components/core/blocks/Search/search'
 import Personal from './layoutHeaderAcount'
 
@@ -38,7 +38,7 @@ export default {
      
       components: {
         Logo,
-        MainNav,
+        navigationHeader,
         Search,
         Personal
       }
