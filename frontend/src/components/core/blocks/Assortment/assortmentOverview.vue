@@ -3,14 +3,25 @@
     <h2>Blader in het assortiment (OV)</h2>
     <div>
         <ul>
-            <li v-for="assortment in assortments" :key="assortment.id" v-on:click="getId(assortment.id)" >
-                <router-link :to="linkUrl +'/'+ assortment.id"  class="" >
+            <li v-for="assortment in assortments" :key="assortment.id" v-on:click="getId()" >
+                <router-link v-if="assortment.child" :to="linkUrl +'/'+ assortment.id" >
                     <div class="product-image dimensions small-image">
                         <a class="assortment-icon" :class="color" :title="globalAssortment"></a>
                         <figure>
                             <img :src="imageUrl + assortment.img" :alt="assortment.title">
                             <figcaption class="overlay">
-                                <div>{{ assortment.title }}</div>
+                                <div >{{ assortment.title }}</div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </router-link>
+                <router-link v-else :to="'/products/'+ assortment.id"  >
+                    <div class="product-image dimensions small-image">
+                        <a class="assortment-icon" :class="color" :title="globalAssortment"></a>
+                        <figure>
+                            <img :src="imageUrl + assortment.img" :alt="assortment.title">
+                            <figcaption class="overlay">
+                                <div >{{ assortment.title }}</div>
                             </figcaption>
                         </figure>
                     </div>
@@ -39,16 +50,12 @@ import settings from '@/constants/settings';
         },
         created() {   
             this.init();
-            console.log(this.id+'|'+this.id2+'|'+this.id3+'||'+this.show);
-
         },
         methods: {
             init(){
                 this.id = this.$route.params.id;
                 this.id2 = this.$route.params.id2;
                 this.id3 = this.$route.params.id3;
-                
-                console.log(this.id+'|'+this.id2+'|'+this.id3);
 
                 this.$http.get(api.getAssortment +'?id='+this.id).then((response) => {
                     this.color = response.data[0].color;
@@ -60,10 +67,14 @@ import settings from '@/constants/settings';
 
                     if (this.id2) { 
                         for (let _i=0 ; _i< this.assortments.length; _i++) {
+                             if (this.assortments[_i].child){
+                                this.linkUrl = './'+this.id2;    
+                             }
+                             
                             if (this.assortments[_i].id == this.id2) {
                                 this.assortments = this.assortments[_i].child;
                                 this.imageUrl = settings.productklassegroep;
-                                this.linkUrl = './'+this.id2;
+                              
                             }
                         }
                     }
@@ -80,16 +91,15 @@ import settings from '@/constants/settings';
                         }
                     }
                 }).catch(function (error) {
-                    //console.log(error.response.status);
+                    console.log(error.response);
                 });
             },
-            getId: function (newId) {
-             this.id2 = newId;
+            getId: function () {
              this.init();
             },
         },
         watch: {
-             $route (to, from){
+             $route (){
                 this.init();
             }
         }
