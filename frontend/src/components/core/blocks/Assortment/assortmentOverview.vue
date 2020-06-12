@@ -89,7 +89,7 @@ import settings from '@/constants/settings';
                         }
                     }
                 }).catch(function (error) {
-                    console.log(error);
+                    console.log(error.response.status);
                 });
             },
             getId: function () {
