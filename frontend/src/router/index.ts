@@ -6,8 +6,7 @@ import services from '../pages/services.vue'
 import productsPage from '../pages/products.vue'
 
 import assortmentGlobalOverview from '../components/core/blocks/Assortment/assortmentGlobalOverview.vue' 
-import assortmentFirstSubOverview from '../components/core/blocks/Assortment/assortmentFirstSubOverview.vue'
-import assortmentSecondSubOverview from '../components/core/blocks/Assortment/assortmentSecondSubOverview.vue'
+import assortmentOverview from '../components/core/blocks/Assortment/assortmentOverview.vue'
 import productsOverview from '../components/core/blocks/Products/productsOverview.vue' 
 
 Vue.use(VueRouter)
@@ -25,7 +24,7 @@ const routes = [
      name: 'Webshop',
      component: assortmentPage,
      children: [
-      { path: '/', component: assortmentGlobalOverview }
+      { path: '/webshop', component: assortmentGlobalOverview },
       ]
   },
   {
@@ -41,16 +40,18 @@ const routes = [
     component: assortmentPage,
     children: [
           { path: '/assortment', component: assortmentGlobalOverview },
-          { path: '/assortment/:id', component: assortmentFirstSubOverview},
-          { path: '/assortment/:id/:id2', component: assortmentSecondSubOverview}
-          ]
+          { path: '/assortment/:id', component: assortmentOverview},
+          { path: '/assortment/:id/:id2', component: assortmentOverview},
+          { path: '/assortment/:id/:id2/:id3', component: assortmentOverview}
+        ]
    },
   {
-    path: '/products/:category', 
+    path: '/products', 
     name: 'products',
     component: productsPage,
     children: [
-          { path: '/', component: productsOverview}
+          { path: '/products', component: assortmentGlobalOverview },
+          { path: '/products/:category', component: productsOverview}
           ]
    }
 ]

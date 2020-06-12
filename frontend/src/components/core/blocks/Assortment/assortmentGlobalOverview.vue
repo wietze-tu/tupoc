@@ -2,7 +2,7 @@
     <div>
         <article v-for="assortment in assortments" :key="assortment.id" class="widget-assortment col-sm-3 ">
             <div class="assortment-widget-detail">
-              <a class="assortment-widget-detail-link" href="#">
+              <router-link v-bind:to="'assortment/'+assortment.id"  class="assortment-widget-detail-link" >
                 <div 
                     class="ribbon assortment" 
                     :class="assortment.color">
@@ -26,7 +26,7 @@
                         </router-link>    
                     </p>
                 </div>
-                </a>
+              </router-link>
             </div>
         </article>
     </div>

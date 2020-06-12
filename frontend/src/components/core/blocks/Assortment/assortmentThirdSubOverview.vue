@@ -1,6 +1,6 @@
 <template>
 <div id="visual-search-results">
-    <h2>Blader in het assortiment</h2>
+    <h2>Blader in het assortiment*</h2>
     <div>
         <ul>
             <li v-for="assortment in assortments" :key="assortment.id" >
@@ -31,6 +31,7 @@ import settings from '@/constants/settings';
                 imageUrl: settings.productgroep,
                 id: this.$route.params.id,
                 id2: this.$route.params.id2,
+                id3: this.$route.params.id3,
                 assortments: []
             }
         },
@@ -39,12 +40,13 @@ import settings from '@/constants/settings';
             this.$http.get(api.getAssortment +'?id='+this.id).then((response) => {
                 this.color = response.data[0].color;
                 this.globalAssortment = response.data[0].title;
-                this.assortments = response.data[0].child
-                if (this.id2) { 
+                this.assortments = response.data[0].child[0].child;
+                console.log(this.assortments)
+                if (this.id3) { 
                     for (let _i=0 ; _i< this.assortments.length; _i++) {
-                        if (this.assortments[_i].id == this.id2) {
+                        if (this.assortments[_i].id == this.id3) {
                             this.assortments = this.assortments[_i].child
-                            this.imageUrl = settings.productklassegroep;
+                            this.imageUrl = settings.productklasse;
                         }
                     }
                 }
