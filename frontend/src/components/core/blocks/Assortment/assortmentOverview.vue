@@ -1,6 +1,6 @@
 <template>
 <div id="visual-search-results">
-    <h2>Blader in het assortiment (OV)</h2>
+    <h2>Blader in het assortiment</h2>
     <div>
         <ul>
             <li v-for="assortment in assortments" :key="assortment.id" v-on:click="getId()" >
@@ -46,6 +46,7 @@ import settings from '@/constants/settings';
                 id2: this.$route.params.id2,
                 id3: this.$route.params.id3,
                 assortments: []
+                
             }
         },
         created() {   
@@ -81,17 +82,14 @@ import settings from '@/constants/settings';
                    if (this.id3) { 
                         for (let _i=0 ; _i < this.assortments.length; _i++) {
                             if (this.assortments[_i].id == this.id3) {
-                                for(let _x=0; _x < this.assortments[_i].child.length; _x++){
-                                    this.assortments = this.assortments[_i].child;
-                                    this.imageUrl = settings.productklasse;
-                                    this.linkUrl = '/products/'+this.id3;
-                                }
-
+                                this.imageUrl = settings.productklasse;
+                                this.linkUrl = './'+this.id3;
+                                 this.assortments = this.assortments[_i].child;
                             }
                         }
                     }
                 }).catch(function (error) {
-                    console.log(error.response);
+                    console.log(error);
                 });
             },
             getId: function () {
