@@ -1,40 +1,48 @@
 <template>
-<div id="visual-search-results">
-    <h2>Blader in het assortiment</h2>
-    <div>
-        <ul>
-            <li v-for="assortment in assortments" :key="assortment.id" v-on:click="getId()" >
-                <router-link v-if="assortment.child" :to="linkUrl +'/'+ assortment.id" >
-                    <div class="product-image dimensions small-image">
-                        <a class="assortment-icon" :class="color" :title="globalAssortment"></a>
-                        <figure>
-                            <img :src="imageUrl + assortment.img" :alt="assortment.title">
-                            <figcaption class="overlay">
-                                <div >{{ assortment.title }}</div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </router-link>
-                <router-link v-else :to="'/products/'+ assortment.id"  >
-                    <div class="product-image dimensions small-image">
-                        <a class="assortment-icon" :class="color" :title="globalAssortment"></a>
-                        <figure>
-                            <img :src="imageUrl + assortment.img" :alt="assortment.title">
-                            <figcaption class="overlay">
-                                <div >{{ assortment.title }}</div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </router-link>
-            </li>
-        </ul>
+<article id="assortment">
+    <h3 class="section-header">{{globalAssortment}} bij de technischeunie</h3>
+    <div id="visual-search-results" class="row ">
+        <div>
+            <h2>Blader in het assortiment</h2>
+            <ul>
+                <li v-for="assortment in assortments" :key="assortment.id"  >
+                    <router-link v-if="assortment.child" :to="linkUrl +'/'+ assortment.id" >
+                        <div class="product-image dimensions small-image">
+                            <a class="assortment-icon" :class="color" :title="globalAssortment"></a>
+                            <figure>
+                                <img :src="imageUrl + assortment.img" :alt="assortment.title">
+                                <figcaption class="overlay">
+                                    <div >{{ assortment.title }}</div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </router-link>
+                    <router-link v-else :to="'/products/'+ assortment.id"  >
+                        <div class="product-image dimensions small-image">
+                            <a class="assortment-icon" :class="color" :title="globalAssortment"></a>
+                            <figure>
+                                <img :src="imageUrl + assortment.img" :alt="assortment.title">
+                                <figcaption class="overlay">
+                                    <div >{{ assortment.title }}</div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </router-link>
+                </li>
+            </ul>
+        </div>
+
     </div>
-</div>
+    <div id="assortmentIntro" class="row">
+        <p v-html="assortmentText"></p>
+    </div>
+</article>
 </template>
 
 <script>
 import api from '@/constants/api';
 import settings from '@/constants/settings';
+import example from '@/constants/exampleText';
 
     export default {
         name: 'Assortment',
@@ -42,11 +50,12 @@ import settings from '@/constants/settings';
             return {
                 linkUrl:  './',
                 imageUrl: '',
-                id: this.$route.params.id,
-                id2: this.$route.params.id2,
-                id3: this.$route.params.id3,
-                assortments: []
-                
+                id: false,
+                id2: false,
+                id3: false,
+                assortments: [],
+                assortmentText: ''
+              
             }
         },
         created() {   
@@ -63,19 +72,15 @@ import settings from '@/constants/settings';
                     this.globalAssortment = response.data[0].title;
                     this.assortments = response.data[0].child;                 
                     this.length = response.data[0].child.length;
-                    this.imageUrl = settings.productgroep,
+                    this.imageUrl = settings.productgroep;
                     this.linkUrl = './'+this.id;
-
+                    this.greet(this.color);
                     if (this.id2) { 
-                        for (let _i=0 ; _i< this.assortments.length; _i++) {
-                             if (this.assortments[_i].child){
-                                this.linkUrl = './'+this.id2;    
-                             }
-                             
+                        for (let _i=0 ; _i< this.assortments.length; _i++) {                          
                             if (this.assortments[_i].id == this.id2) {
                                 this.assortments = this.assortments[_i].child;
                                 this.imageUrl = settings.productklassegroep;
-                              
+                                this.linkUrl = './'+this.id2; 
                             }
                         }
                     }
@@ -89,12 +94,24 @@ import settings from '@/constants/settings';
                         }
                     }
                 }).catch(function (error) {
-                    console.log(error.response.status);
+                    console.log(error);
                 });
             },
-            getId: function () {
-             this.init();
-            },
+            greet: function(event) {
+
+                switch (event) {
+                    case 'orange':
+                        this.assortmentText =  example.assortmentTextOrange;
+                        break;
+                    case 'red': 
+                        this.assortmentText =  example.assortmentTextRed;
+                        break;
+                    case 'green':
+                        this.assortmentText =  example.assortmentTextGreen;
+                        break;
+                   
+                }
+            }
         },
         watch: {
              $route (){
@@ -108,58 +125,50 @@ import settings from '@/constants/settings';
 </script>
 
 <style scoped lang="scss">
-.icon {
-    margin-left: 5px;
+article#assortment {
+    margin-top: 50px;
+}
+h3.section-header {
+    font-size: 16.8px;
+    text-align: left;
+    color: $tuGreen;
+    border: 1px solid $tuGrayBasic;
+    line-height: 35px;
+    padding: 10px;
+    background: linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
+    background: -webkit-linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
+    background: -o-linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
+    background: -moz-linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$tuWhite,endColorstr=$tuWhiteGray,GradientType=0);
+    &:first-letter{
+    text-transform: capitalize
+    }
+}
+#assortmentIntro.row {
+    text-align: left;
+    ul {
+        li {
+            list-style: circle;
+            padding-left: 0px;
+        }
+    }
+   
+    p {
+        font-size: 11px;
+        line-height: 14.5px;
+        strong  {
+            font-size: 11px !important;
+            font-weight: bold;
+            color: red !important;
+            margin-bottom: 0;
+        }
+    }
+    ul {
+        li {
+            list-style: circle;
+            padding-left: 0px;
+        }
+    }
 }
 
-article {
-        float: left;
-        margin-top: 20px;
-        margin-right: 12px;
-        text-align: left;
-        padding: 0;
-        max-width: 220px;
-        .assortment-widget-detail {
-            background: linear-gradient(to bottom,$tuWhite,$tuWhiteGray);
-        }
-        h2 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            text-shadow: 1px 1px #333;
-            line-height: 17px;
-            padding-left: 5px;
-            font-weight: 700;
-            color: $tuWhite;
-        } 
-        div.ribbon {
-            margin-left: 0;
-            padding-left: 7px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            .green{
-                background: $tuGreen;
-            }
-        }
-        .assortment-description {
-            color: $tuGray;
-            text-decoration: none;
-            font-size: 11.2px;
-            padding: 5px;
-            min-height: 100px;
-            text-align: left;
-        }
-        
-    .assortment-widget-detail-link-button {
-        font-size: 12px;
-            line-height: 30px;
-    }
-    
-}
-@media only screen and (max-width: 600px) {
-    article {
-        padding-left: 15px;
-        padding-right: 15px;
-        max-width: 100%;
-    }
-}
 </style>
