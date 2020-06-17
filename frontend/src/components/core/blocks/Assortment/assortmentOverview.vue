@@ -34,10 +34,10 @@
 
     </div>
     <div id="assortmentIntro" class="row">
-        <p v-html="assortmentText"></p>
+        <p v-if="showAssortmentText" v-html="assortmentText">{{showAssortmentText}}</p>
     </div>
 </article>
-</template>
+</template>s
 
 <script>
 import api from '@/constants/api';
@@ -55,7 +55,8 @@ import example from '@/constants/exampleText';
                 id3: false,
                 assortments: [],
                 assortmentText: '',
-                globalAssortment: ''
+                globalAssortment: '',
+                showAssortmentText: false
               
             }
         },
@@ -71,14 +72,18 @@ import example from '@/constants/exampleText';
                 this.$http.get(api.getAssortment +'?id='+this.id).then((response) => {
                     this.color = response.data[0].color;
                     this.globalAssortment = response.data[0].title;
+                    this.showAssortmentText = response.data[0].showAssortmentText;
                     this.assortments = response.data[0].child;                 
                     this.length = response.data[0].child.length;
                     this.imageUrl = settings.productgroep;
                     this.linkUrl = './'+this.id;
-                    this.greet(this.color);
+                    this.text(this.color);
+
                     if (this.id2) { 
-                        for (let _i=0 ; _i< this.assortments.length; _i++) {                          
+                        for (let _i=0 ; _i< this.assortments.length; _i++) {   
+                 
                             if (this.assortments[_i].id == this.id2) {
+                                this.showAssortmentText = this.assortments[_i].showAssortmentText;
                                 this.assortments = this.assortments[_i].child;
                                 this.imageUrl = settings.productklassegroep;
                                 this.linkUrl = './'+this.id2; 
@@ -87,10 +92,13 @@ import example from '@/constants/exampleText';
                     }
                    if (this.id3) { 
                         for (let _i=0 ; _i < this.assortments.length; _i++) {
+
                             if (this.assortments[_i].id == this.id3) {
+                                this.showAssortmentText = this.assortments[_i].showAssortmentText;
                                 this.imageUrl = settings.productklasse;
                                 this.linkUrl = './'+this.id3;
                                  this.assortments = this.assortments[_i].child;
+                                 
                             }
                         }
                     }
@@ -98,7 +106,7 @@ import example from '@/constants/exampleText';
                     console.log(error);
                 });
             },
-            greet: function(event) {
+            text: function(event) {
 
                 switch (event) {
                     case 'orange':
