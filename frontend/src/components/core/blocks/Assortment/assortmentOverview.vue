@@ -54,7 +54,8 @@ import example from '@/constants/exampleText';
                 id2: false,
                 id3: false,
                 assortments: [],
-                assortmentText: ''
+                assortmentText: '',
+                globalAssortment: ''
               
             }
         },
@@ -125,50 +126,5 @@ import example from '@/constants/exampleText';
 </script>
 
 <style scoped lang="scss">
-article#assortment {
-    margin-top: 50px;
-}
-h3.section-header {
-    font-size: 16.8px;
-    text-align: left;
-    color: $tuGreen;
-    border: 1px solid $tuGrayBasic;
-    line-height: 35px;
-    padding: 10px;
-    background: linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
-    background: -webkit-linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
-    background: -o-linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
-    background: -moz-linear-gradient($tuWhite,$tuWhite,$tuWhiteGray);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$tuWhite,endColorstr=$tuWhiteGray,GradientType=0);
-    &:first-letter{
-    text-transform: capitalize
-    }
-}
-#assortmentIntro.row {
-    text-align: left;
-    ul {
-        li {
-            list-style: circle;
-            padding-left: 0px;
-        }
-    }
-   
-    p {
-        font-size: 11px;
-        line-height: 14.5px;
-        strong  {
-            font-size: 11px !important;
-            font-weight: bold;
-            color: red !important;
-            margin-bottom: 0;
-        }
-    }
-    ul {
-        li {
-            list-style: circle;
-            padding-left: 0px;
-        }
-    }
-}
 
 </style>
