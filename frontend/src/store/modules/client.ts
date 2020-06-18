@@ -1,5 +1,5 @@
-import axios from 'axios';
-import api from '../../constants/api';
+//import axios from 'axios';
+//import api from '../../constants/api';
 
 const getDefaultState = () => {
     return {
@@ -18,8 +18,9 @@ const actions = {
         commit('resetState')
       },
     async fetchClient( {commit}, user) {
-        const response = await axios.get(api.getUser +'/'+ user);
-            commit('setClient', response.data);
+        console.log(user)
+        //const response = await axios.get(api.getUser +'/'+ user);
+        commit('setClient', user);
     }
 };
 
